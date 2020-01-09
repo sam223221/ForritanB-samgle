@@ -1,10 +1,16 @@
 package fo.samgle;
 
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        String date = System.console().readLine();;
+        String date = JOptionPane.showInputDialog("What is your name?");
+        System.out.println("Name is: " + name);
+
+
+        String date = System.console().readLine();
 
         int day = Integer.parseInt(date);
         int month=12;
@@ -15,7 +21,6 @@ public class Main {
 
                 day++;
             System.out.println(day + "-" + month + "-" + year);
-
 
     }
 }
