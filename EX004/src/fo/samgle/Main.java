@@ -16,21 +16,23 @@ public class Main {
         int m = Integer.parseInt(month);
         int y = Integer.parseInt(year);
 
+
+
+        int Dim [] = {31,28,31,30,31,30,31,31,30,31,30,31};
+
+        if((y % 4 == 0 && y % 100 != 0 )|| y  %  400 ==0 ){
+            Dim[1]=29;
+        }
+
+        if (d > Dim[m-1]) {
+            d = 1;
+            m++;
+          }
+
         if (m > 12){
             m = 1;
             y++;
 
-        }
-
-        int Dim [] = {31,28,31,30,31,30,31,31,30,31,30,31};
-
-        if (d > Dim[m]) {
-            d = 1;
-            m++;
-        }
-
-        if((y % 4 && y % 100 != 0 )|| y  %  400){
-            Dim[1]=29;
         }
 
         System.out.println("dato er" + d +"-" + m + "-"+ y );
