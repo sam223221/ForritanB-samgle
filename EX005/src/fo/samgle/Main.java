@@ -7,4 +7,3 @@ public class Main {
         f.Show();
     }
 }
-© 2020 GitHub, Inc.

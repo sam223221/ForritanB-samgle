@@ -10,6 +10,14 @@ public class Form {
     private JTextField textField;
     private JTextArea textArea;
 
+    final int[] time = {6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
+    int timi;
+
+    int food= 10;
+
+    int ganga = 20;
+
+
     private ActionListener button1Press;
     private ActionListener button2Press;
     private ActionListener button3Press;
@@ -25,27 +33,57 @@ public class Form {
 
     public void Show() {
 
+
         button1Press = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String inputText  = textField.getText();
-                Log("Knapp 1: " + inputText);
+                timi++;
+                food--;
+                if (timi == 17){
+                    timi=0;
+                }
+                if (ganga < 15){
+                    food = food - 3;
+                }
+                ganga--;
+                if(food <= 0 ){
+                    Log("hundur tí er deyður");
+                }
+                String inputText = textField.getText();
+                if (food > 0 ) {
+
+                    Log("næsti tími er: " + time[timi] + " matur " + food   +   "  orka"  +   ganga);
+                }
             }
         };
 
         button2Press = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (food > 0 && food < 20 ){
+                    food++;
+                    Log("Eta: "+ food);
+                } else {
+                    Log("full");
+                }
+
                 String inputText  = textField.getText();
-                Log("Knapp 2: " + inputText);
+
             }
         };
 
         button3Press = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                if (ganga == 30){
+                    Log("for nógv orka ");
+                    ganga--;
+                }else{
+                    ganga++;
+                }
                 String inputText  = textField.getText();
-                Log("Knapp 3: " + inputText);
+                Log("Ganga túr: " + ganga);
             }
         };
 
@@ -53,7 +91,7 @@ public class Form {
         AddButton("Næsti tími", new Rectangle(10, 35, 100, 25), button1Press);
         AddButton("Et", new Rectangle(120, 35, 100, 25), button2Press);
         AddButton("Gang", new Rectangle(230, 35, 100, 25), button3Press);
-        AddTextArea(new Rectangle(10, 65, 600, 400));
+        AddTextArea(new Rectangle(10, 65, 600, 1000));
         frame.setVisible(true);
     }
 
@@ -78,4 +116,7 @@ public class Form {
     private void Log(String text) {
         textArea.append((text + "\n"));
     }
+
+
+
 }
