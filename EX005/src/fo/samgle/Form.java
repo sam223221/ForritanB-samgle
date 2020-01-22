@@ -45,7 +45,7 @@ public class Form {
                 }
                 ganga--;
                 if(food <= 0 ){
-                    Log("hundur tí er deyður");
+                    Log("hundur tín er deyður");
                 }
                 String inputText = textField.getText();
                 if (food > 0 ) {
