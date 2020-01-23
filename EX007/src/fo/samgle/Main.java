@@ -15,4 +15,4 @@ public class Main {
             System.out.println("hevði tað bara veri jól");
         }
     }
-} 
+}
