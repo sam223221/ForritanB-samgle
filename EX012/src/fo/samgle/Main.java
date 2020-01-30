@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String name = JOptionPane.showInputDialog("gev eitt tal").toLowerCase(), revers = "";
+        String name = JOptionPane.showInputDialog("er navn Palindrom").toLowerCase(), revers = "";
 
         int lenght = name.length();
 
