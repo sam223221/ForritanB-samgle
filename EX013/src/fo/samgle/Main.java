@@ -12,16 +12,23 @@ public class Main {
         int lenghthey = heystak.length();
         int lenghtneed = needel.length();
 
+        System.out.println(lenghtneed);
+
+        for(int i = lenghtneed; i <= lenghthey ;i++){
+
+            int tjek = i - lenghtneed;
+
+            for(int a = tjek; a < lenghtneed ; a++){
 
 
-        for(int i = lenghtneed; lenghtneed >= lenghthey ;i++){
 
+            }
+/*/
             String test = heystak.charAt(lenghtneed);
 
             if(heystak.charAt(lenghtneed)){
-
+/*/
             }
         }
 
     }
-}
