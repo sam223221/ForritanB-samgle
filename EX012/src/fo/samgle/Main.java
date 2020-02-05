@@ -18,7 +18,7 @@ public class Main {
         if(name.equals(revers)){
             System.out.println("hettar er ein pallinom");
         }else{
-            System.out.println("nigga you gay??");
+            System.out.println("im cleen boys, not racist");
 
         }
     }
