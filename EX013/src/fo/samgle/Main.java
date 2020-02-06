@@ -28,6 +28,8 @@ public class Main {
 
             if(heystak.charAt(lenghtneed)){
 /*/
+
+
             }
         }
 
