@@ -1,57 +1,52 @@
 package fo.samgle;
 
-import javax.swing.*;
-import java.util.Set;
-import java.util.SortedSet;
+import java.util.*;
 
 public class GuiBuilder {
     private final WrongGuessesCounter _wrongGuessesCounter;
-    public GuiBuilder(WrongGuessesCounter wrongGuessesCounter) {
-        _wrongGuessesCounter = wrongGuessesCounter;
-    }
 
+    public GuiBuilder(WrongGuessesCounter wrongGuessesCounter) { _wrongGuessesCounter = wrongGuessesCounter;
+    }
+/*
+    public String getGuiBuilder(String solution, set<Character> guessed ){
+        return GuiBuilder.getGUI(solution,  ConvertSetToArrayList(Set<Character>));
+
+    }
+*/
     public String getGUI(String solution, Set<Character> guessed) {
 
-        int rattGit = solution.length();
-        int rætttelja = 0;
-        int skeiftGit = 0;
-        char[] word = new char[solution.length()];
+        String solutionMasked = "";
 
-        for (int i = 0; i < solution.length(); i++) {
-            word[i] = solution.charAt(i);
-        }
-
-        char[] solutionMasked = new char[solution.length()];
-
-        for (int i = 0; i < solution.length(); i++) {
-            solutionMasked[i] = '*';
-        }
-
-        System.out.println(solution);
-        System.out.println(solutionMasked);
-
-
-        for (int i = 0; i <= solution.length() + 5; i++) {
-            String Guess = JOptionPane.showInputDialog("gita orði");
-            skeiftGit++;
-            for (int a = 0; a < solution.length(); a++) {
-                if (Guess.charAt(0) == word[a]) {
-                    solutionMasked[a] = solution.charAt(a);
-
-                    rætttelja++;
-                    skeiftGit--;
-
-
+            for (int i = 0 ; i < solution.length() ; i++) {
+                char cUpp = Character.toUpperCase(solution.charAt(i));
+                char cDown = Character.toLowerCase(solution.charAt(i));
+                if (guessed.contains(cDown)||guessed.contains(cUpp)){
+                    solutionMasked = solutionMasked + solution.charAt(i);
+                }else{
+                    solutionMasked = solutionMasked + "*";
                 }
             }
-            System.out.println(solutionMasked);
-            System.out.println(skeiftGit);
-            if (rætttelja == rattGit) {
-                return;
-            }
-            if (skeiftGit == 5) {
-                return;
-            }
+            ;
+        return "loysn:"+ solutionMasked+"\n"+
+                "git :"+ guessed.toString()+"\n"+
+                "skeiv git " + _wrongGuessesCounter.Count(solution, guessed);
+    }
+
+
+    static ArrayList<Character> ConvertSetToArrayList(Set<Character> characterSet) {
+        ArrayList<Character> result = new ArrayList();
+        Iterator<Character> iterator = characterSet.iterator();
+        while (iterator.hasNext()) {
+            result.add(iterator.next());
         }
+        return result;
+    }
+
+    static Set<Character> ConvertArrayListToSet(List<Character> characterList) {
+        Set<Character> result = new TreeSet();
+        for (int i = 0; i < characterList.size(); i++) {
+            result.add(characterList.get(i));
+        }
+        return result;
     }
 }
