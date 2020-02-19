@@ -11,7 +11,7 @@ public class GuiBuilder {
     }
 
     public String getGUI(String solution, Set<Character> guessed) {
-        
+
         int rattGit = solution.length();
         int rætttelja = 0;
         int skeiftGit = 0;
