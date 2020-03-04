@@ -17,8 +17,7 @@ public class Bilur {
                 "   Framleiðari   "        + Framleiðari + "\n\r" +
                 "   Model         "        + Model       + "\n\r" +
                 "   MotorStødd    "        + Motorstødd  + "\n\r" +
-                "   EigaraNavn    "        + EigaraNavn  + "\n\r" +
-                "   ferð          "        + Ferð
+                "   EigaraNavn    "        + EigaraNavn  + "\n\r"
                 ;
     }
 
