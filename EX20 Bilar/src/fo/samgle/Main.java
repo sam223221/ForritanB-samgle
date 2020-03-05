@@ -7,38 +7,41 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Bilur NK607 = new Bilur();     //Bilur nummar eitt
+        Bilur b0 = new framleiðari();     //Bilur nummar eitt
 
-        NK607.Framleiðari = "Maszda";
-        NK607.Model       = "6 2006";
-        NK607.Motorstødd  = "2,4 Benzin";
-        NK607.EigaraNavn  = "Sam Gleðisheygg";
-        NK607.Ferð        = 0 ;
-        NK607.Nummarpláta = "NK607";
+        b0.Framleiðari = "Maszda";
+        b0.Model       = "6 2006";
+        b0.Motorstødd  = "2,4 Benzin";
+        b0.EigaraNavn  = "Sam Gleðisheygg";
+        b0.Ferð        = 0 ;
+        b0.Nummarpláta = "NK607";
 
-        Bilur FN700 = new Bilur();     //Bilur nummar tvey
+        Bilur b1 = new Bilur();     //Bilur nummar tvey
 
-        FN700.Framleiðari = "Citroën";
-        FN700.Model       = "C4";
-        FN700.Motorstødd  = "2,0 Disel";
-        FN700.EigaraNavn  = "Hjalti Gleðisheygg";
-        FN700.Ferð        = 0 ;
-        FN700.Nummarpláta = "FN700";
+        b1.Framleiðari = "Citroën";
+        b1.Model       = "C4";
+        b1.Motorstødd  = "2,0 Disel";
+        b1.EigaraNavn  = "Hjalti Gleðisheygg";
+        b1.Ferð        = 0 ;
+        b1.Nummarpláta = "FN700";
 
-        Bilur AF453 = new Bilur();     //Bilur nummar trý
+        Bilur b2 = new Bilur();     //Bilur nummar trý
 
-        AF453.Framleiðari = "TOYOTA";
-        AF453.Model       = "Yaris";
-        AF453.Motorstødd  = "1,2 Benzin";
-        AF453.EigaraNavn  = "dávið Hentze";
-        AF453.Ferð        = 0 ;
-        AF453.Nummarpláta = "AF453";
+        b2.Framleiðari = "TOYOTA";
+        b2.Model       = "Yaris";
+        b2.Motorstødd  = "1,2 Benzin";
+        b2.EigaraNavn  = "dávið Hentze";
+        b2.Ferð        = 0 ;
+        b2.Nummarpláta = "AF453";
+
 
 
         ArrayList<Bilur> NummarPláta = new ArrayList();
-        NummarPláta.add(NK607);
-        NummarPláta.add(FN700);
-        NummarPláta.add(AF453);
+        NummarPláta.add(b0);
+        NummarPláta.add(b1);
+        NummarPláta.add(b2);
+
+
 
         String Input = JOptionPane.showInputDialog("Hvat er nummarplátan hjá tær");
 
@@ -53,7 +56,7 @@ public class Main {
                 t.Bremsa();
                 System.out.println("Ferðin " + t.Ferð);
 
-                return;
+                break;
             }
 
         }
