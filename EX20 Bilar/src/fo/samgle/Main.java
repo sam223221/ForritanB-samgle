@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Bilur b0 = new framleiðari();     //Bilur nummar eitt
+        Bilur b0 = new Bilur();     //Bilur nummar eitt
 
         b0.Framleiðari = "Maszda";
         b0.Model       = "6 2006";
