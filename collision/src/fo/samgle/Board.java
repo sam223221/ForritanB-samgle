@@ -26,7 +26,7 @@ import javax.swing.Timer;
         private final int ICRAFT_Y = 60;
         private final int B_WIDTH = 400;
         private final int B_HEIGHT = 300;
-        private final int DELAY = 15;
+        private final int DELAY = 10;
 
         private final int[][] pos = {
                 {2380, 29}, {2500, 59}, {1380, 89},
