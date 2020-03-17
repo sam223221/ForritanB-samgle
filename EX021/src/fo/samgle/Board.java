@@ -2,33 +2,37 @@ package fo.samgle;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Date;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
 import javax.swing.JButton;
 
 
-public class Board extends JPanel {
+public class Board extends JPanel implements ActionListener {
 
-String text = "hey John";
+
+
 
     public Integer F_W = 400;
     public Integer F_H = 300;
     public boolean ingame;
-    Integer DELAY = 15;
+    private Timer timer ;
+    private Integer DELAY = 1000;
+
 
     JButton button1 = new JButton("EndGame");
     JButton button2 = new JButton("StartGame");
 
-    Date d = new Date();
-    String dateString = d.toString();
-    Timer timer = new Timer();
-    
+    CurrentTimeSprite CurrentTimeSprite = new CurrentTimeSprite();
+
+
     public Board(){
         initBoard();
     }
 
     private void initBoard(){
 
-
+        timer = new Timer(DELAY,(ActionListener)this);
         timer.start();
         ingame = true;
         inGame();
@@ -38,6 +42,9 @@ String text = "hey John";
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+        System.out.println("hh");
+
         if (ingame) {
 
             drawObjects(g);
@@ -61,22 +68,30 @@ private void drawGameOver(Graphics g){
 
     g.setColor(Color.white);
     g.setFont(small);
-    g.drawString(msg, (F_W - fm.stringWidth(msg)) / 2,
-            F_H / 2);
+    g.drawString(msg, (F_W - fm.stringWidth(msg)) / 2, F_H / 2);
 
 }
 
     public void drawObjects(Graphics g) {
 
-        g.setColor(Color.YELLOW);
-        g.drawString(text,F_W/2,F_H/2);
+        Font x = new Font("Calibri", Font.BOLD, 20);
 
-        g.drawString(dateString,F_W/2,F_H/2+40);
+
+
+        g.setColor(Color.GREEN);
+        g.setFont(x);
+        g.drawString(CurrentTimeSprite.getCurrentTime(),CurrentTimeSprite.x = (new Random()).nextInt(400), CurrentTimeSprite.y = (new Random()).nextInt(400));
+
+
     }
     private void inGame() {
 
         if (!ingame) {
-            timer.stop();
+        timer.stop();
         }
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){
+            repaint();
     }
 }
