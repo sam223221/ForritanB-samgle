@@ -1,6 +1,6 @@
 package fo.samgle;
 
-import javax.print.attribute.standard.PrinterMakeAndModel;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

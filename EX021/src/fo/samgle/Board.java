@@ -27,6 +27,7 @@ public class Board extends JPanel implements ActionListener {
 
 
     public Board(){
+
         initBoard();
     }
 
@@ -43,7 +44,6 @@ public class Board extends JPanel implements ActionListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        System.out.println("hh");
 
         if (ingame) {
 
