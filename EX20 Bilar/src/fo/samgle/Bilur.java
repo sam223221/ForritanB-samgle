@@ -2,12 +2,12 @@ package fo.samgle;
 
 public class Bilur {
 
-    public String Framleiðari    =   "";
-    public String Model          =   "";
-    public String Motorstødd     =   "";
-    public String EigaraNavn     =   "";
-    public String Nummarpláta    =   "";
-    public Integer Ferð          =   0;
+    public String   Framleiðari     =   "";
+    public String   Model           =   "";
+    public String   Motorstødd      =   "";
+    public String   EigaraNavn      =   "";
+    public String   Nummarpláta     =   "";
+    public Integer  Ferð            =   0 ;
 
     @Override
     public String toString(){

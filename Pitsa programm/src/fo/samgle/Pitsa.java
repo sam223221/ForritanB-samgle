@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class Pitsa {
 
 public void pitsa(){
-    JPanel f = new JPanel();
+    JFrame f = new JFrame();
 
     //Margarita
     JButton Margarita = new JButton("01 Margarita");

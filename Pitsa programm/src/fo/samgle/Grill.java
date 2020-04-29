@@ -10,7 +10,7 @@ public class Grill {
 
 
     public void Grill(){
-        JPanel f = new JPanel();
+        JFrame f = new JFrame();
 
             //Jumbo Burgari
         JButton Jumbo_Burgari = new JButton("Jumbo Burgari");
@@ -107,8 +107,8 @@ public class Grill {
         Broytt.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Broytt");
-                broytt_pitsa bp = new broytt_pitsa();
-                bp.Broytt_pitsa();
+                broytt_grill bp = new broytt_grill();
+                bp.broytt_Grill();
             }});
         f.add(Broytt);
 
@@ -144,14 +144,15 @@ public class Grill {
             }});
             f.add(Ligut);
 
+
     //listin
     String text = "Margarita";
-    JLabel listi = new JLabel(text);
+        JLabel listi = new JLabel(text);
         listi.setBounds(600,50,200,400);
     Border border = BorderFactory.createLineBorder(Color.BLUE, 5);
 
+    //upsetanin
         f.add(listi);
-
         f.setSize(900,1000);
         f.setLayout(null);
         f.setVisible(true);
