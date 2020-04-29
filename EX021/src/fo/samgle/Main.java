@@ -19,7 +19,7 @@ public class Main {
 
 
         panel.setBackground(Color.BLACK);
-        frame.setSize(panel.F_W,panel.F_H);
+        frame.setSize(400,400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel.button1,BorderLayout.NORTH);
         frame.add(panel.button2,BorderLayout.SOUTH);

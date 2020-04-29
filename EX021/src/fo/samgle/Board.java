@@ -75,13 +75,12 @@ private void drawGameOver(Graphics g){
     public void drawObjects(Graphics g) {
 
         Font x = new Font("Calibri", Font.BOLD, 20);
-        Integer xc =  CurrentTimeSprite.x = (new Random()).nextInt(400);
-        Integer yc =  CurrentTimeSprite.y = (new Random()).nextInt(400);
+        Integer xc =  CurrentTimeSprite.x = (new Random()).nextInt(300);
+        Integer yc =  CurrentTimeSprite.y = (new Random()).nextInt(300);
 
         g.setColor(Color.GREEN);
         g.setFont(x);
         g.drawString(CurrentTimeSprite.getCurrentTime(),xc, yc);
-
 
     }
     private void inGame() {
