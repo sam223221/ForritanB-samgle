@@ -1,5 +1,7 @@
 package fo.samgle;
 
+import java.util.ArrayList;
+
 public class Bilur {
 
     public String   Framleiðari     =   "";
@@ -20,6 +22,8 @@ public class Bilur {
                 "   EigaraNavn    "        + EigaraNavn  + "\n\r"
                 ;
     }
+
+
 
         public void Koyr() {
             this.Ferð = 50;

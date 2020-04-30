@@ -6,18 +6,31 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Grill {
+public class Grill extends Matur{
 
 
     public void Grill(){
         JFrame f = new JFrame();
+        Bestidling order = new Bestidling();
+
+        //listin
+            JList list = new JList(dataList);
+            list.setBounds(600 , 150 , 200 , 300);
+            Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
+            list.setBorder(border);
+            list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
 
             //Jumbo Burgari
         JButton Jumbo_Burgari = new JButton("Jumbo Burgari");
             Jumbo_Burgari.setBounds(50,150,200,50);
             Jumbo_Burgari.setFont(new Font("Verdana",3,17));
             Jumbo_Burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari"); }});
+            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
+            Matur Jumbo_Burgari = new Matur();
+            Jumbo_Burgari.BurgarNavn = "Jumbo Burgari";
+                order.bestidling.add(Jumbo_Burgari);
+            }});
             f.add(Jumbo_Burgari);
 
         //Big Burgari
@@ -145,14 +158,8 @@ public class Grill {
             f.add(Ligut);
 
 
-    //listin
-    String text = "Margarita";
-        JLabel listi = new JLabel(text);
-        listi.setBounds(600,50,200,400);
-    Border border = BorderFactory.createLineBorder(Color.BLUE, 5);
-
     //upsetanin
-        f.add(listi);
+        f.add(list);
         f.setSize(900,1000);
         f.setLayout(null);
         f.setVisible(true);
