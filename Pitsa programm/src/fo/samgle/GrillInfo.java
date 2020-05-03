@@ -1,18 +1,15 @@
 package fo.samgle;
 
-public class GrillInfo {
+public class GrillInfo extends PitsaInfo{
 
-    String BurgaraNavn = "";
-    String Búffar = "";
-    String[] Filla;
-
+    String GrillNavn = "";
+    String[] Eyka;
     @Override
     public String toString() {
 
         return  "\n\r" +
-                "   Burgara Navn    : " + BurgaraNavn + "\n\r" +
-                "   Búffar          : " + Búffar      + "\n\r" +
-                "   fillan          : " + Filla       + "\n\r" ;
+                "GrillNavn      : " + GrillNavn + "\n\r"+
+                "Eyka tilhoyri  : " + Eyka      + "\n\r";
     }
 
 }

@@ -31,8 +31,12 @@ public class Grill extends ViewBase {
             JumboBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Jumbo Burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo JumboBurgari = new BurgaraInfo();
+                JumboBurgari.BurgaraNavn = "JumboBurgari";
+                JumboBurgari.Búffar = 2;
+                JumboBurgari.Filla= new String[]{"Tomat" , "Agurk" , "Leyk" , "Kál" , "1000 Islands"};
                 Main.dataList.addElement("Jumbo Burgari");
+                Main.bestidling.add(JumboBurgari);
             }});
             add(JumboBurgari);
 
@@ -43,8 +47,12 @@ public class Grill extends ViewBase {
             BigBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Big Burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo BigBurgari = new BurgaraInfo();
+                BigBurgari.BurgaraNavn = "BigBurgari";
+                BigBurgari.Búffar = 1;
+                BigBurgari.Filla= new String[]{"Tomat", "Agurk" , "Leyk" , "Kál" , "1000 Islands"};
                 Main.dataList.addElement("Big Burgari");
+                Main.bestidling.add(BigBurgari);
             }});
             add(BigBurgari);
 
@@ -55,8 +63,12 @@ public class Grill extends ViewBase {
             CheeseBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Cheese Burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo CheeseBurgari = new BurgaraInfo();
+                CheeseBurgari.BurgaraNavn = "CheeseBurgari";
+                CheeseBurgari.Búffar = 1;
+                CheeseBurgari.Filla= new String[]{"Tomat", "Agurk" , "Leyk" , "Kál" , "1000 Islands"};
                 Main.dataList.addElement("Cheese Burgari");
+                Main.bestidling.add(CheeseBurgari);
             }});
             add(CheeseBurgari);
 
@@ -67,8 +79,12 @@ public class Grill extends ViewBase {
             BaconBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Bacon Burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo BaconBurgari = new BurgaraInfo();
+                BaconBurgari.BurgaraNavn = "BaconBurgari";
+                BaconBurgari.Búffar = 1;
+                BaconBurgari.Filla= new String[]{"Tomat", "Agurk" , "Leyk" , "Kál" , "BBQ"};
                 Main.dataList.addElement("Bacon Burgari");
+                Main.bestidling.add(BaconBurgari);
             }});
             add(BaconBurgari);
 
@@ -79,8 +95,12 @@ public class Grill extends ViewBase {
         JuniorBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Junior Burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo JuniorBurgari = new BurgaraInfo();
+                JuniorBurgari.BurgaraNavn = "JuniorBurgari";
+                JuniorBurgari.Búffar = 1;
+                JuniorBurgari.Filla= new String[]{"Ketjup " , "StoktanLeyk "};
                 Main.dataList.addElement("Junior Burgari");
+                Main.bestidling.add(JuniorBurgari);
             }});
             add(JuniorBurgari);
 
@@ -91,8 +111,12 @@ public class Grill extends ViewBase {
             Búffsandwich.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Búffsandwich");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo Búffsandwich = new BurgaraInfo();
+                Búffsandwich.BurgaraNavn = "JumboBurgari";
+                Búffsandwich.Búffar = 2;
+                Búffsandwich.Filla= new String[]{"súlta Agurk" , "Reyttkál" , "soktan Leyk" , "Ketjup" , "Sinup"};
                 Main.dataList.addElement("Miss Piggy");
+                Main.bestidling.add(Búffsandwich);
             }});
             add(Búffsandwich);
 
@@ -103,8 +127,12 @@ public class Grill extends ViewBase {
             KyllingaBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Kyllinga burgari");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo KyllingaBurgari = new BurgaraInfo();
+                KyllingaBurgari.BurgaraNavn = "KyllingaBurgari";
+                KyllingaBurgari.Búffar = 1;
+                KyllingaBurgari.Filla= new String[]{"Agurk" , "Leyk" , "Kál" , "Chilli Dressing"};
                 Main.dataList.addElement("KyllingaBurgari");
+                Main.bestidling.add(KyllingaBurgari);
             }});
             add(KyllingaBurgari);
 
@@ -115,8 +143,11 @@ public class Grill extends ViewBase {
             KyllingKips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Kylling og kips");
-                GrillInfo grillInfo = new GrillInfo();
+                GrillInfo KyllingKips = new GrillInfo();
+                KyllingKips.GrillNavn = "Kylling og kips";
+                KyllingKips.Eyka = new String[] {""};
                 Main.dataList.addElement("Kylling og Kips");
+                Main.bestidling.add(KyllingKips);
             }});
             add(KyllingKips);
 
@@ -127,8 +158,11 @@ public class Grill extends ViewBase {
             FiskKips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Fisk og Kips");
-                GrillInfo grillInfo = new GrillInfo();
+                GrillInfo FiskKips = new GrillInfo();
+                FiskKips.GrillNavn = "Fisk og Kips";
+                FiskKips.Eyka = new String[] {""};
                 Main.dataList.addElement("Fisk og Kips");
+                Main.bestidling.add(FiskKips);
             }});
             add(FiskKips);
 
@@ -139,8 +173,11 @@ public class Grill extends ViewBase {
             Nuggets.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Nuggets");
-                GrillInfo grillInfo = new GrillInfo();
+                GrillInfo Nuggets = new GrillInfo();
+                Nuggets.GrillNavn = "Nuggets";
+                Nuggets.Eyka = new String[] {""};
                 Main.dataList.addElement("Nuggets");
+                Main.bestidling.add(Nuggets);
             }});
             add(Nuggets);
 
@@ -151,8 +188,11 @@ public class Grill extends ViewBase {
             Kips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Kips");
-                GrillInfo grillInfo = new GrillInfo();
+                GrillInfo Kips = new GrillInfo();
+                Kips.GrillNavn = "Kips";
+                Kips.Eyka = new String[] {""};
                 Main.dataList.addElement("Kips");
+                Main.bestidling.add(Kips);
             }});
             add(Kips);
 
@@ -163,7 +203,7 @@ public class Grill extends ViewBase {
         Broytt.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Broytt");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo burgaraInfo = new BurgaraInfo();
                 broytt_grill bp = new broytt_grill();
                 bp.broytt_Grill();
             }});
@@ -176,7 +216,7 @@ public class Grill extends ViewBase {
             pitsa.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Pitsa");
-                GrillInfo grillInfo = new GrillInfo();
+                BurgaraInfo burgaraInfo = new BurgaraInfo();
                 getMain().NavigateTo("Pitsa");
             }});
             add(pitsa);
@@ -204,6 +244,7 @@ public class Grill extends ViewBase {
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
                 getMain().NavigateTo("Startsíða");
+                System.out.println(Main.bestidling);
                 Main.dataList.removeAllElements();
                 Main.bestidling.clear();
             }});

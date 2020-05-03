@@ -1,6 +1,7 @@
 package fo.samgle;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,13 +17,22 @@ public class broytt_grill {
         f.setLayout(null);
         f.setVisible(true);
 
+        //listi
+        DefaultListModel BroyttDataList = new DefaultListModel();
+        JList list = new JList(BroyttDataList);
+        list.setBounds(660 , 20 , 200 , 275);
+        Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
+        list.setBorder(border);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        f.add(list);
+
         //Búffur
         JButton buffur = new JButton("buffur");
         buffur.setBounds(25,20,175,50);
         buffur.setFont(new Font("Verdana",3,17));
         buffur.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("buffur");
+                BroyttDataList.addElement("buffur");
             }});
         f.add(buffur);
 
@@ -33,8 +43,8 @@ public class broytt_grill {
         BaconB.setBounds(25,90,175,50);
         BaconB.setFont(new Font("Verdana",3,17));
         BaconB.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Bacon Búff");
+                BroyttDataList.addElement("Bacon Búff");
             }});
         f.add(BaconB);
 
@@ -44,8 +54,8 @@ public class broytt_grill {
         KyllingB.setBounds(25,160,175,50);
         KyllingB.setFont(new Font("Verdana",3,17));
         KyllingB.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Kylling Búff");
+                BroyttDataList.addElement("Kylling Búff");
             }});
         f.add(KyllingB);
 
@@ -55,8 +65,8 @@ public class broytt_grill {
         kal.setBounds(25,230,175,50);
         kal.setFont(new Font("Verdana",3,17));
         kal.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("kál");
+                BroyttDataList.addElement("kál");
             }});
         f.add(kal);
 
@@ -66,8 +76,8 @@ public class broytt_grill {
         reyttK.setBounds(25,300,175,50);
         reyttK.setFont(new Font("Verdana",3,17));
         reyttK.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Reytt kál");
+                BroyttDataList.addElement("Reytt kál");
             }});
         f.add(reyttK);
 
@@ -77,8 +87,8 @@ public class broytt_grill {
         Leyk.setBounds(25,370,175,50);
         Leyk.setFont(new Font("Verdana",3,17));
         Leyk.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Leyk");
+                BroyttDataList.addElement("Leyk");
             }});
         f.add(Leyk);
 
@@ -87,8 +97,8 @@ public class broytt_grill {
         StoyktL.setBounds(225,20,175,50);
         StoyktL.setFont(new Font("Verdana",3,17));
         StoyktL.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Stoykt Leyk");
+                BroyttDataList.addElement("Stoykt Leyk");
             }});
         f.add(StoyktL);
 
@@ -99,8 +109,8 @@ public class broytt_grill {
         Agurk.setBounds(225,90,175,50);
         Agurk.setFont(new Font("Verdana",3,17));
         Agurk.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Agurk");
+                BroyttDataList.addElement("Agurk");
             }});
         f.add(Agurk);
 
@@ -110,8 +120,8 @@ public class broytt_grill {
         sultaA.setBounds(225,160,175,50);
         sultaA.setFont(new Font("Verdana",3,17));
         sultaA.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Súlta Agurk");
+                BroyttDataList.addElement("Ost");
             }});
         f.add(sultaA);
 
@@ -122,7 +132,7 @@ public class broytt_grill {
         Tomat.setFont(new Font("Verdana",3,17));
         Tomat.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Tomat");
-
+                BroyttDataList.addElement("Tomat");
             }});
         f.add(Tomat);
 
@@ -133,7 +143,7 @@ public class broytt_grill {
         Ost.setFont(new Font("Verdana",3,17));
         Ost.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Ost");
-
+                BroyttDataList.addElement("Ost");
             }});
         f.add(Ost);
 
@@ -143,18 +153,18 @@ public class broytt_grill {
         Islands.setBounds(225,370,175,50);
         Islands.setFont(new Font("Verdana",3,17));
         Islands.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("1000 Islands");
+                BroyttDataList.addElement("1000 Islands");
             }});
         f.add(Islands);
 
-        //Cream Fresh
-        JButton CreamF = new JButton("Cream Fresh");
+        //creme fraiche
+        JButton CreamF = new JButton("creme fraiche");
         CreamF.setBounds(450,20,175,50);
         CreamF.setFont(new Font("Verdana",3,17));
         CreamF.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("creme fraiche");
+                BroyttDataList.addElement("creme fraiche");
             }});
         f.add(CreamF);
 
@@ -165,19 +175,19 @@ public class broytt_grill {
         chilliD.setBounds(450,90,175,50);
         chilliD.setFont(new Font("Verdana",3,17));
         chilliD.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("chilliD");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Chilli dressing");
+                BroyttDataList.addElement("Chilli dressing");
             }});
         f.add(chilliD);
 
 
         //hvítleyk Dressing
-        JButton hvítleykD = new JButton("hvítleyk Dressing");
+        JButton hvítleykD = new JButton("Ketjup");
         hvítleykD.setBounds(450,160,175,50);
         hvítleykD.setFont(new Font("Verdana",3,17));
         hvítleykD.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-
+            public void actionPerformed(ActionEvent e){ System.out.println("Ketjup");
+                BroyttDataList.addElement("Ketjup");
             }});
         f.add(hvítleykD);
 
@@ -188,7 +198,7 @@ public class broytt_grill {
         BBQ.setFont(new Font("Verdana",3,17));
         BBQ.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("BBQ");
-
+                BroyttDataList.addElement("BBQ");
             }});
         f.add(BBQ);
 
@@ -199,7 +209,7 @@ public class broytt_grill {
         Bacon.setFont(new Font("Verdana",3,17));
         Bacon.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Bacon");
-
+                BroyttDataList.addElement("Bacon");
             }});
         f.add(Bacon);
 
@@ -210,7 +220,7 @@ public class broytt_grill {
         salat.setFont(new Font("Verdana",3,17));
         salat.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("salat");
-
+                BroyttDataList.addElement("salat");
             }});
         f.add(salat);
 
@@ -222,30 +232,27 @@ public class broytt_grill {
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
-
+                for(int i = 0 ; i < BroyttDataList.size() ; i++){
+                    //Main.bestidling.get(Pitsa.selected).toppings.toString().replace(i,BroyttDataList.get(i));
+                }
+                f.dispose();
             }});
         f.add(Ligut);
 
 
-        //av
-        JButton av = new JButton("av");
-        av.setBounds(685,300,175,50);
-        av.setFont(new Font("Verdana",3,17));
-        av.addActionListener(new ActionListener(){
+        //Strika
+        JButton Strika = new JButton("Strika");
+        Strika.setBounds(685,300,175,50);
+        Strika.setFont(new Font("Verdana",3,17));
+        Strika.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("av");
+                System.out.println("Strika");
+                int selected = list.getSelectedIndex();
+                if (selected != -1 ){
+                    BroyttDataList.remove(selected);
+                    System.out.println(selected);
+                }
             }});
-        f.add(av);
-
-
-        //á
-        JButton a = new JButton("á");
-        a.setBounds(685,230,175,50);
-        a.setFont(new Font("Verdana",3,17));
-        a.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                System.out.println("a");
-            }});
-        f.add(a);
+        f.add(Strika);
     }
 }
