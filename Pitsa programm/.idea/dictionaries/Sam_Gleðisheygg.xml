@@ -6,16 +6,20 @@
       <w>bakerstreet</w>
       <w>bestidling</w>
       <w>broytt</w>
+      <w>burgar</w>
       <w>burgari</w>
       <w>búffsandwich</w>
       <w>chilli</w>
       <w>diablo</w>
       <w>doygg</w>
       <w>forsíða</w>
+      <w>fraiche</w>
       <w>gera</w>
+      <w>hvítleyk</w>
       <w>høsna</w>
       <w>kirjastein</w>
       <w>kjøt</w>
+      <w>kylling</w>
       <w>kyllinga</w>
       <w>leyk</w>
       <w>ligut</w>
@@ -23,11 +27,14 @@
       <w>listin</w>
       <w>mais</w>
       <w>matur</w>
+      <w>millum</w>
+      <w>navn</w>
       <w>ostur</w>
       <w>peproni</w>
       <w>piparfrukt</w>
       <w>pista</w>
       <w>pitsa</w>
+      <w>pitsaslag</w>
       <w>pitsasós</w>
       <w>rækjur</w>
       <w>salat</w>
@@ -40,9 +47,13 @@
       <w>tekst</w>
       <w>textfild</w>
       <w>todi</w>
+      <w>uppseting</w>
       <w>upsetanin</w>
       <w>vegitar</w>
       <w>vísa</w>
+      <w>vísari</w>
+      <w>yvirskrift</w>
+      <w>yvurskrift</w>
     </words>
   </dictionary>
 </component>

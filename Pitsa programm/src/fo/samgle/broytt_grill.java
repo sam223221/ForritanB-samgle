@@ -186,8 +186,7 @@ public class broytt_grill {
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
-                Grill g = new Grill();
-                g.Grill();
+
             }});
         f.add(Ligut);
 

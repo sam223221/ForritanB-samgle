@@ -1,38 +1,54 @@
 package fo.samgle;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.jar.JarFile;
 
 public class broytt_pitsa {
 
     public void Broytt_pitsa(){
 
+        //uppseting
         JFrame f = new JFrame();
-
         f.setSize(900,500);
         f.setLayout(null);
         f.setVisible(true);
+        String topping;
 
+        //listi
+        DefaultListModel BroyttDataList = new DefaultListModel();
+        JList list = new JList(BroyttDataList);
+        list.setBounds(660 , 20 , 200 , 200);
+        Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
+        list.setBorder(border);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        f.add(list);
+            int tel = ;
+        for ( int i = 0 ; i < tel; i++) {
+
+           BroyttDataList.addElement(Main.bestidling.get().toppings[i]);
+
+        }
         //Ostur
         JButton Ostur = new JButton("Ostur");
         Ostur.setBounds(25,20,175,50);
         Ostur.setFont(new Font("Verdana",3,17));
         Ostur.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari"); }});
+            public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
+            }});
         f.add(Ostur);
 
 
 
-        //Pepparoni
-        JButton Pepparoni = new JButton("Pepparoni");
-        Pepparoni.setBounds(25,90,175,50);
-        Pepparoni.setFont(new Font("Verdana",3,17));
-        Pepparoni.addActionListener(new ActionListener(){
+        //Pepperoni
+        JButton Pepperoni = new JButton("Pepparoni");
+        Pepperoni.setBounds(25,90,175,50);
+        Pepperoni.setFont(new Font("Verdana",3,17));
+        Pepperoni.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari"); }});
-        f.add(Pepparoni);
+        f.add(Pepperoni);
 
 
         //Bacon
@@ -134,22 +150,22 @@ public class broytt_pitsa {
 
 
 
-        //Tbasco
-        JButton Tbasco = new JButton("Tbasco");
-        Tbasco.setBounds(450,90,175,50);
-        Tbasco.setFont(new Font("Verdana",3,17));
-        Tbasco.addActionListener(new ActionListener(){
+        //Tabasco
+        JButton Tabasco = new JButton("Tbasco");
+        Tabasco.setBounds(450,90,175,50);
+        Tabasco.setFont(new Font("Verdana",3,17));
+        Tabasco.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari"); }});
-        f.add(Tbasco);
+        f.add(Tabasco);
 
 
-        //Jalabeno
-        JButton Jalabeno = new JButton("Jalabeno");
-        Jalabeno.setBounds(450,160,175,50);
-        Jalabeno.setFont(new Font("Verdana",3,17));
-        Jalabeno.addActionListener(new ActionListener(){
+        //Jalapeno
+        JButton Jalapeno = new JButton("Jalabeno");
+        Jalapeno.setBounds(450,160,175,50);
+        Jalapeno.setFont(new Font("Verdana",3,17));
+        Jalapeno.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari"); }});
-        f.add(Jalabeno);
+        f.add(Jalapeno);
 
 
         //1000 Islands
@@ -162,7 +178,7 @@ public class broytt_pitsa {
 
 
         //Cream fresh
-        JButton Cream = new JButton("Cream fresh");
+        JButton Cream = new JButton("creme fraiche");
         Cream.setBounds(450,300,175,50);
         Cream.setFont(new Font("Verdana",3,17));
         Cream.addActionListener(new ActionListener(){
@@ -186,8 +202,7 @@ public class broytt_pitsa {
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
-                Pitsa p = new Pitsa();
-                p.pitsa();
+
             }});
         f.add(Ligut);
 

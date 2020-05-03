@@ -6,19 +6,22 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Pitsa extends Matur {
+public class Pitsa extends ViewBase {
 
-public void pitsa(){
-    JFrame f = new JFrame();
-    Bestidling order = new Bestidling();
+public Integer select;
+public Pitsa(){
+
+    //uppseting
+    setSize(new Dimension(900, 1000));
+    setLayout(null);
 
     //listin
-    JList list = new JList(dataList);
-    list.setBounds(600 , 150 , 200 , 300);
-    Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
-    list.setBorder(border);
-    list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
+        JList list = new JList(Main.dataList);
+        list.setBounds(600 , 150 , 200 , 300);
+        Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
+        list.setBorder(border);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        add(list);
 
     //Margarita
     JButton Margarita = new JButton("01 Margarita");
@@ -26,15 +29,16 @@ public void pitsa(){
         Margarita.setFont(new Font("Verdana",3,17));
         Margarita.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Margarita");
-        Matur margarita = new Matur();
+        PitsaInfo margarita = new PitsaInfo();
         margarita.pitsaNavn = "Margarita";
         margarita.doygg = "Medium";
         margarita.pitsasós = "Pitsasós";
         margarita.toppings = new String[]{"Ost"};
-        order.bestidling.add(margarita);
-        dataList.addElement("Margarita");
+        Main.bestidling.add(margarita);
+        Main.dataList.addElement("Margarita");
         }});
-        f.add(Margarita);
+        add(Margarita);
+
 
     //Billy the kid
     JButton Billy_the_kid  = new JButton("02 Billy the kid");
@@ -42,15 +46,15 @@ public void pitsa(){
         Billy_the_kid.setFont(new Font("Verdana",3,17));
         Billy_the_kid.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Billy the kid");
-        Matur Billy_the_Kid = new Matur();
+        PitsaInfo Billy_the_Kid = new PitsaInfo();
             Billy_the_Kid.pitsaNavn = "Billy the Kid";
             Billy_the_Kid.doygg = "Medium";
             Billy_the_Kid.pitsasós = "Pitsasós";
             Billy_the_Kid.toppings = new String[] {" Kjøt"," Leyk","Ost"};
-            order.bestidling.add(Billy_the_Kid);
-            dataList.addElement("Billy the kid");
+            Main.bestidling.add(Billy_the_Kid);
+            Main.dataList.addElement("Billy the kid");
         }});
-        f.add(Billy_the_kid);
+        add(Billy_the_kid);
 
     //Hawaii
     JButton Hawaii = new JButton("03 Hawaii");
@@ -58,15 +62,15 @@ public void pitsa(){
         Hawaii.setFont(new Font("Verdana",3,17));
         Hawaii.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Hawaii");
-        Matur Hawaii = new Matur();
+        PitsaInfo Hawaii = new PitsaInfo();
             Hawaii.pitsaNavn = "Hawaii";
             Hawaii.doygg = "Medium";
             Hawaii.pitsasós = "Pitsasós";
             Hawaii.toppings = new String[] {"Annanas"," Skinka"," Ost"};
-            order.bestidling.add(Hawaii);
-            dataList.addElement("Hawaii");
+            Main.bestidling.add(Hawaii);
+            Main.dataList.addElement("Hawaii");
         }});
-        f.add(Hawaii);
+        add(Hawaii);
 
     //Pepperoni
     JButton Pepperoni = new JButton("04 Pepperoni");
@@ -74,15 +78,15 @@ public void pitsa(){
     Pepperoni.setFont(new Font("Verdana",3,17));
     Pepperoni.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Pepperoni");
-            Matur Pepperoni = new Matur();
+            PitsaInfo Pepperoni = new PitsaInfo();
             Pepperoni.pitsaNavn = "Pepperoni";
             Pepperoni.doygg = "Medium";
             Pepperoni.pitsasós = "Pitsasós";
             Pepperoni.toppings = new String[] {"Pepperoni" ," Piparfrukt"};
-            order.bestidling.add(Pepperoni);
-            dataList.addElement("Pepperoni");
+            Main.bestidling.add(Pepperoni);
+            Main.dataList.addElement("Pepperoni");
         }});
-        f.add(Pepperoni);
+        add(Pepperoni);
 
     //Diablo Tyson
     JButton Diablo_Tyson = new JButton("05 Diablo Tyson");
@@ -90,15 +94,15 @@ public void pitsa(){
         Diablo_Tyson.setFont(new Font("Verdana",3,17));
         Diablo_Tyson.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Diablo Tyson");
-            Matur Diablo_Tyson = new Matur();
+            PitsaInfo Diablo_Tyson = new PitsaInfo();
             Diablo_Tyson.pitsaNavn = "Diablo Tyson";
             Diablo_Tyson.doygg = "Medium";
             Diablo_Tyson.pitsasós = "Pitsasós";
             Diablo_Tyson.toppings =new String[] {"Kjøt"," Pepperoni"," Chilli"," Tabasco"," Ost"};
-            order.bestidling.add(Diablo_Tyson);
-            dataList.addElement("Diablo Tyson");
+            Main.bestidling.add(Diablo_Tyson);
+            Main.dataList.addElement("Diablo Tyson");
         }});
-        f.add(Diablo_Tyson);
+        add(Diablo_Tyson);
 
     //Manchester United
     JButton Man_United = new JButton("06 Manchester");
@@ -106,15 +110,15 @@ public void pitsa(){
         Man_United.setFont(new Font("Verdana",3,17));
         Man_United.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Manchester United");
-            Matur Man_United = new Matur();
+            PitsaInfo Man_United = new PitsaInfo();
             Man_United.pitsaNavn = "Manchester United";
             Man_United.doygg = "Medium";
             Man_United.pitsasós = "Pitsasós";
             Man_United.toppings = new String[] {" Piparfrukt"," Annanas"," Ost"," Bacon"};
-            order.bestidling.add(Man_United);
-            dataList.addElement("Manchester United");
+            Main.bestidling.add(Man_United);
+            Main.dataList.addElement("Manchester United");
         }});
-        f.add(Man_United);
+        add(Man_United);
 
     //Liverpool
     JButton Liverpool = new JButton("07 Liverpool");
@@ -122,15 +126,15 @@ public void pitsa(){
         Liverpool.setFont(new Font("Verdana",3,17));
         Liverpool.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Liverpool");
-            Matur Liverpool = new Matur();
+            PitsaInfo Liverpool = new PitsaInfo();
             Liverpool.pitsaNavn = "Liverpool";
             Liverpool.doygg = "Medium";
             Liverpool.pitsasós = "Pitsasós";
             Liverpool.toppings = new String[] {" Main"," Piparfrukt"," Chilli"," Ost"};
-            order.bestidling.add(Liverpool);
-            dataList.addElement("Liverpool");
+            Main.bestidling.add(Liverpool);
+            Main.dataList.addElement("Liverpool");
         }});
-        f.add(Liverpool);
+        add(Liverpool);
 
     //Arsenal
     JButton Arsenal = new JButton("08 Arsenal");
@@ -138,15 +142,15 @@ public void pitsa(){
         Arsenal.setFont(new Font("Verdana",3,17));
         Arsenal.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Arsenal");
-            Matur Arsenal = new Matur();
+            PitsaInfo Arsenal = new PitsaInfo();
             Arsenal.pitsaNavn = "Arsenal";
             Arsenal.doygg = "Medium";
             Arsenal.pitsasós = "Pitsasós";
             Arsenal.toppings = new String[] {" Rækjur"," Leyk"," Hvítleyk"," Ost"};
-            order.bestidling.add(Arsenal);
-            dataList.addElement("Arsenal");
+            Main.bestidling.add(Arsenal);
+            Main.dataList.addElement("Arsenal");
         }});
-        f.add(Arsenal);
+        add(Arsenal);
 
     //Todi
     JButton Todi = new JButton("09 Todi");
@@ -154,15 +158,15 @@ public void pitsa(){
         Todi.setFont(new Font("Verdana",3,17));
         Todi.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Todi");
-            Matur Todi = new Matur();
+            PitsaInfo Todi = new PitsaInfo();
             Todi.pitsaNavn = "Todi";
             Todi.doygg = "Medium";
             Todi.pitsasós = "Pitsasós";
             Todi.toppings = new String[]{"Pepperoni"," Leyk"," Piparfrukt" ," Tabasco"," Chilli"," Ost"," Bacon"};
-            order.bestidling.add(Todi);
-            dataList.addElement("Todi");
+            Main.bestidling.add(Todi);
+            Main.dataList.addElement("Todi");
         }});
-        f.add(Todi);
+        add(Todi);
 
     //Homer
     JButton Homer = new JButton("10 Homer");
@@ -170,15 +174,15 @@ public void pitsa(){
         Homer.setFont(new Font("Verdana",3,17));
         Homer.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Homer");
-            Matur Homer = new Matur();
+            PitsaInfo Homer = new PitsaInfo();
             Homer.pitsaNavn = "Homer";
             Homer.doygg = "Medium";
             Homer.pitsasós = "Pitsasós";
             Homer.toppings = new String[]{" Skinka"," Pepperoni"," Ost"};
-            order.bestidling.add(Homer);
-            dataList.addElement("Homer");
+            Main.bestidling.add(Homer);
+            Main.dataList.addElement("Homer");
         }});
-        f.add(Homer);
+        add(Homer);
 
     //Picasso
     JButton Picasso = new JButton("11 Picasso");
@@ -186,15 +190,15 @@ public void pitsa(){
         Picasso.setFont(new Font("Verdana",3,17));
         Picasso.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Picasso");
-            Matur Picasso = new Matur();
+            PitsaInfo Picasso = new PitsaInfo();
             Picasso.pitsaNavn = "Picasso";
             Picasso.doygg = "Medium";
             Picasso.pitsasós = "Pitsasós";
             Picasso.toppings = new String[]{"Kjøt"," Leyk"," Mais"," Ost"," Bacon"};
-            order.bestidling.add(Picasso);
-            dataList.addElement("Picasso");
+            Main.bestidling.add(Picasso);
+            Main.dataList.addElement("Picasso");
         }});
-        f.add(Picasso);
+        add(Picasso);
 
     //Miss Piggy
     JButton Miss_piggy = new JButton("12 Miss Piggy");
@@ -202,15 +206,15 @@ public void pitsa(){
         Miss_piggy.setFont(new Font("Verdana",3,17));
         Miss_piggy.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Miss Piggy");
-            Matur Miss_piggy = new Matur();
+            PitsaInfo Miss_piggy = new PitsaInfo();
             Miss_piggy.pitsaNavn = "Miss piggy";
             Miss_piggy.doygg = "Medium";
             Miss_piggy.pitsasós = "Pitsasós";
             Miss_piggy.toppings = new String[]{" Leyk"," Piparfrukt"," Ost"," Bacon"};
-            order.bestidling.add(Miss_piggy);
-            dataList.addElement("Miss Piggy");
+            Main.bestidling.add(Miss_piggy);
+            Main.dataList.addElement("Miss Piggy");
         }});
-        f.add(Miss_piggy);
+        add(Miss_piggy);
 
     //Pitsa 530
     JButton Pitsa_530 = new JButton("13 Pitsa 530");
@@ -218,15 +222,15 @@ public void pitsa(){
         Pitsa_530.setFont(new Font("Verdana",3,17));
         Pitsa_530.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Pitsa 530");
-            Matur Pitsa_530 = new Matur();
+            PitsaInfo Pitsa_530 = new PitsaInfo();
             Pitsa_530.pitsaNavn = "Pitsa 530";
             Pitsa_530.doygg = "Medium";
             Pitsa_530.pitsasós = "Pitsasós";
             Pitsa_530.toppings = new String[]{ "Skinka"," Kjøt"," Rækjur"," Ost" ," Bacon"};
-            order.bestidling.add(Pitsa_530);
-            dataList.addElement("Pitsa 530");
+            Main.bestidling.add(Pitsa_530);
+            Main.dataList.addElement("Pitsa 530");
         }});
-        f.add(Pitsa_530);
+        add(Pitsa_530);
 
     //salat Pitsa
     JButton Salat_pitsa = new JButton("14 Salat Pitsa");
@@ -234,15 +238,15 @@ public void pitsa(){
         Salat_pitsa.setFont(new Font("Verdana",3,17));
         Salat_pitsa.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Salat Pitsa");
-            Matur Salat_pitsa = new Matur();
+            PitsaInfo Salat_pitsa = new PitsaInfo();
             Salat_pitsa.pitsaNavn = "Salat pitsa";
             Salat_pitsa.doygg = "Medium";
             Salat_pitsa.pitsasós = "Pitsasós";
             Salat_pitsa.toppings = new String[]{"Ost"};
-            order.bestidling.add(Salat_pitsa);
-            dataList.addElement("salat Pitsa");
+            Main.bestidling.add(Salat_pitsa);
+            Main.dataList.addElement("salat Pitsa");
         }});
-        f.add(Salat_pitsa);
+        add(Salat_pitsa);
 
     //Peproni Special
     JButton Peproni_special = new JButton("15 Pep Special");
@@ -250,15 +254,15 @@ public void pitsa(){
         Peproni_special.setFont(new Font("Verdana",3,17));
         Peproni_special.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Pep Special");
-            Matur Peproni_special = new Matur();
+            PitsaInfo Peproni_special = new PitsaInfo();
             Peproni_special.pitsaNavn = "Peproni special";
             Peproni_special.doygg = "Medium";
             Peproni_special.pitsasós = "Pitsasós";
             Peproni_special.toppings =new String[]{ "Pepperoni", " Pepperoni", " Ost", " Ost"};
-            order.bestidling.add(Peproni_special);
-            dataList.addElement("Peproni Special");
+            Main.bestidling.add(Peproni_special);
+            Main.dataList.addElement("Peproni Special");
         }});
-        f.add(Peproni_special);
+        add(Peproni_special);
 
     //Kirjastein
     JButton Kirjastein = new JButton("16 Kirjastein");
@@ -266,15 +270,15 @@ public void pitsa(){
         Kirjastein.setFont(new Font("Verdana",3,17));
         Kirjastein.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Kirjastein");
-            Matur Kirjastein = new Matur();
+            PitsaInfo Kirjastein = new PitsaInfo();
             Kirjastein.pitsaNavn = "Kirjastein";
             Kirjastein.doygg = "Medium";
             Kirjastein.pitsasós = "Pitsasós";
             Kirjastein.toppings = new String[]{" Annanas", " Mais", " Tun", " Ost", " Bacon"};
-            order.bestidling.add(Kirjastein);
-            dataList.addElement("Kirjastein");
+            Main.bestidling.add(Kirjastein);
+            Main.dataList.addElement("Kirjastein");
         }});
-        f.add(Kirjastein);
+        add(Kirjastein);
 
     //Bakerstreet
     JButton Bakerstreet = new JButton("17 Bakerstreet");
@@ -282,16 +286,16 @@ public void pitsa(){
         Bakerstreet.setFont(new Font("Verdana",3,17));
         Bakerstreet.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Bakerstreet");
-            Matur Bakerstreet = new Matur();
+            PitsaInfo Bakerstreet = new PitsaInfo();
             Bakerstreet.pitsaNavn = "Bakerstreet";
             Bakerstreet.doygg = "Medium";
             Bakerstreet.pitsasós = "Pitsasós";
             Bakerstreet.toppings = new String[]{" Annanas"," Mais", " Skinka"," Piparfrukt", " Leyk"," Soppar",
                     " Pepperoni", " Chilli", " Hvítleyk", " Tabasco", " Ost", " Bacon"};
-            order.bestidling.add(Bakerstreet);
-            dataList.addElement("Bakerstreet");
+            Main.bestidling.add(Bakerstreet);
+            Main.dataList.addElement("Bakerstreet");
         }});
-        f.add(Bakerstreet);
+        add(Bakerstreet);
 
     //Tín Pitsa
     JButton Tin_pitsa = new JButton("18 Tin Pitsa");
@@ -299,15 +303,15 @@ public void pitsa(){
         Tin_pitsa.setFont(new Font("Verdana",3,17));
         Tin_pitsa.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Tin Pitsa");
-            Matur Tin_pitsa = new Matur();
+            PitsaInfo Tin_pitsa = new PitsaInfo();
             Tin_pitsa.pitsaNavn = "Tin_pitsa";
             Tin_pitsa.doygg = "Medium";
             Tin_pitsa.pitsasós = "Pitsasós";
             Tin_pitsa.toppings = new String[]{"Ost"};
-            order.bestidling.add(Tin_pitsa);
-            dataList.addElement("Tín Pitsa");
+            Main.bestidling.add(Tin_pitsa);
+            Main.dataList.addElement("Tín Pitsa");
         }});
-        f.add(Tin_pitsa);
+        add(Tin_pitsa);
 
     //Vegitar Pitsa
     JButton Vegitar_pitsa = new JButton("19 Vegitar Pitsa");
@@ -315,15 +319,15 @@ public void pitsa(){
         Vegitar_pitsa.setFont(new Font("Verdana",3,17));
         Vegitar_pitsa.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Vegitar Pitsa");
-            Matur Vegitar_pitsa = new Matur();
+            PitsaInfo Vegitar_pitsa = new PitsaInfo();
             Vegitar_pitsa.pitsaNavn = "Vegitar_pitsa";
             Vegitar_pitsa.doygg = "Medium";
             Vegitar_pitsa.pitsasós = "Pitsasós";
             Vegitar_pitsa.toppings = new String[]{"Soppar" + " Piparfrukt", " Leyk", " Mais", " Ost"};
-            order.bestidling.add(Vegitar_pitsa);
-            dataList.addElement("Vegitar Pitsa");
+            Main.bestidling.add(Vegitar_pitsa);
+            Main.dataList.addElement("Vegitar Pitsa");
         }});
-        f.add(Vegitar_pitsa);
+        add(Vegitar_pitsa);
 
     //Broytt
     JButton Broytt = new JButton("broytt");
@@ -331,11 +335,16 @@ public void pitsa(){
         Broytt.setFont(new Font("Verdana",3,17));
         Broytt.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
+            int selected = list.getSelectedIndex();
+            select = selected;
             System.out.println("Broytt");
-            broytt_pitsa bp = new broytt_pitsa();
-            bp.Broytt_pitsa();
+            System.out.println(selected);
+            if(selected != -1 ) {
+                broytt_pitsa broyttPitsa = new broytt_pitsa();
+                broyttPitsa.Broytt_pitsa();
+            }
         }});
-        f.add(Broytt);
+        add(Broytt);
 
     //Grill
     JButton Grill = new JButton("Grill");
@@ -344,10 +353,10 @@ public void pitsa(){
         Grill.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
             System.out.println("Grill");
-            fo.samgle.Grill g = new Grill();
-            g.Grill();
+            getMain().NavigateTo("Grill");
+
         }});
-        f.add(Grill);
+        add(Grill);
 
     //Strika
     JButton Strika = new JButton("Strika");
@@ -355,12 +364,14 @@ public void pitsa(){
         Strika.setFont(new Font("Verdana",3,17));
         Strika.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){ System.out.println("Strika");
-        int selected = list.getSelectedIndex();
+            int selected = list.getSelectedIndex();
         if (selected != -1 ){
-            dataList.remove(selected);
+            Main.dataList.remove(selected);
+            Main.bestidling.remove(selected);
+            System.out.println(selected);
         }
         }});
-        f.add(Strika);
+        add(Strika);
 
     //Ligut
     JButton Ligut = new JButton("Ligut");
@@ -369,18 +380,11 @@ public void pitsa(){
         Ligut.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
             System.out.println("Ligut");
-            Main m = new Main();
-            m.Startsíða();
-            System.out.println(order.bestidling);
+            getMain().NavigateTo("Startsíða");
+            System.out.println(Main.bestidling);
+            Main.dataList.removeAllElements();
+            Main.bestidling.clear();
         }});
-        f.add(Ligut);
-
-
-
-    //upsetanin
-    f.add(list);
-    f.setSize(900,1000);
-    f.setLayout(null);
-    f.setVisible(true);
+        add(Ligut);
 }
 }

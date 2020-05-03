@@ -6,112 +6,143 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Grill extends Matur{
+public class Grill extends ViewBase {
+
+    public Grill(){
+
+        //uppseting
+        setSize(new Dimension(900, 1000));
+        setLayout(null);
 
 
-    public void Grill(){
-        JFrame f = new JFrame();
-        Bestidling order = new Bestidling();
 
         //listin
-            JList list = new JList(dataList);
+            JList list = new JList(Main.dataList);
             list.setBounds(600 , 150 , 200 , 300);
             Border border = BorderFactory.createLineBorder(Color.GRAY, 5);
             list.setBorder(border);
             list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
+            add(list);
 
             //Jumbo Burgari
-        JButton Jumbo_Burgari = new JButton("Jumbo Burgari");
-            Jumbo_Burgari.setBounds(50,150,200,50);
-            Jumbo_Burgari.setFont(new Font("Verdana",3,17));
-            Jumbo_Burgari.addActionListener(new ActionListener(){
+        JButton JumboBurgari = new JButton("Jumbo Burgari");
+            JumboBurgari.setBounds(50,150,200,50);
+            JumboBurgari.setFont(new Font("Verdana",3,17));
+            JumboBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){ System.out.println("Jumbo Burgari");
-            Matur Jumbo_Burgari = new Matur();
-            Jumbo_Burgari.BurgarNavn = "Jumbo Burgari";
-                order.bestidling.add(Jumbo_Burgari);
+                Main.dataList.addElement("Jumbo Burgari");
             }});
-            f.add(Jumbo_Burgari);
+            add(JumboBurgari);
 
         //Big Burgari
-        JButton Big_burgari  = new JButton("Big Burgari");
-            Big_burgari.setBounds(50,210,200,50);
-            Big_burgari.setFont(new Font("Verdana",3,17));
-            Big_burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Big Burgari"); }});
-            f.add(Big_burgari);
+        JButton BigBurgari  = new JButton("Big Burgari");
+            BigBurgari.setBounds(50,210,200,50);
+            BigBurgari.setFont(new Font("Verdana",3,17));
+            BigBurgari.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Big Burgari");
+                Main.dataList.addElement("Big Burgari");
+            }});
+            add(BigBurgari);
 
         //Cheese Burgari
-        JButton Cheese_Burgari = new JButton("Cheese Burgari");
-            Cheese_Burgari.setBounds(50,270,200,50);
-            Cheese_Burgari.setFont(new Font("Verdana",3,17));
-            Cheese_Burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Cheese Burgari"); }});
-            f.add(Cheese_Burgari);
+        JButton CheeseBurgari = new JButton("Cheese Burgari");
+            CheeseBurgari.setBounds(50,270,200,50);
+            CheeseBurgari.setFont(new Font("Verdana",3,17));
+            CheeseBurgari.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Cheese Burgari");
+                Main.dataList.addElement("Cheese Burgari");
+            }});
+            add(CheeseBurgari);
 
         //Bacon Burgari
-        JButton Bacon_Burgari = new JButton("Bacon Burgari");
-            Bacon_Burgari.setBounds(50,330,200,50);
-            Bacon_Burgari.setFont(new Font("Verdana",3,17));
-            Bacon_Burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Bacon Burgari"); }});
-            f.add(Bacon_Burgari);
+        JButton BaconBurgari = new JButton("Bacon Burgari");
+            BaconBurgari.setBounds(50,330,200,50);
+            BaconBurgari.setFont(new Font("Verdana",3,17));
+            BaconBurgari.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Bacon Burgari");
+                Main.dataList.addElement("Bacon Burgari");
+            }});
+            add(BaconBurgari);
 
         //Junior Burgari
-        JButton Junior_Burgari = new JButton("Junior Burgari");
-            Junior_Burgari.setBounds(50,390,200,50);
-            Junior_Burgari.setFont(new Font("Verdana",3,17));
-            Junior_Burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Junior Burgari"); }});
-            f.add(Junior_Burgari);
+        JButton JuniorBurgari = new JButton("Junior Burgari");
+        JuniorBurgari.setBounds(50,390,200,50);
+        JuniorBurgari.setFont(new Font("Verdana",3,17));
+        JuniorBurgari.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Junior Burgari");
+                Main.dataList.addElement("Junior Burgari");
+            }});
+            add(JuniorBurgari);
 
         //Búffsandwich
         JButton Búffsandwich = new JButton("Búffsandwich");
             Búffsandwich.setBounds(50,450,200,50);
             Búffsandwich.setFont(new Font("Verdana",3,17));
             Búffsandwich.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Búffsandwich"); }});
-            f.add(Búffsandwich);
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Búffsandwich");
+                Main.dataList.addElement("Miss Piggy");
+            }});
+            add(Búffsandwich);
 
         //Kyllinga burgari
-        JButton Kyllinga_burgari = new JButton("Kyllinga burgari");
-            Kyllinga_burgari.setBounds(50,510,200,50);
-            Kyllinga_burgari.setFont(new Font("Verdana",3,17));
-            Kyllinga_burgari.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Kyllinga burgari"); }});
-            f.add(Kyllinga_burgari);
+        JButton KyllingaBurgari = new JButton("Kyllinga burgari");
+            KyllingaBurgari.setBounds(50,510,200,50);
+            KyllingaBurgari.setFont(new Font("Verdana",3,17));
+            KyllingaBurgari.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Kyllinga burgari");
+                Main.dataList.addElement("KyllingaBurgari");
+            }});
+            add(KyllingaBurgari);
 
         //Kylling og kips
-        JButton Kylling_kips = new JButton("Kylling og kips");
-            Kylling_kips.setBounds(50,570,200,50);
-            Kylling_kips.setFont(new Font("Verdana",3,17));
-            Kylling_kips.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Kylling og kips"); }});
-            f.add(Kylling_kips);
+        JButton KyllingKips = new JButton("Kylling og kips");
+            KyllingKips.setBounds(50,570,200,50);
+            KyllingKips.setFont(new Font("Verdana",3,17));
+            KyllingKips.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Kylling og kips");
+                Main.dataList.addElement("Kylling og Kips");
+            }});
+            add(KyllingKips);
 
         //Fisk og Kips
-        JButton Fisk_Kips = new JButton("Fisk og Kips");
-            Fisk_Kips.setBounds(50,630,200,50);
-            Fisk_Kips.setFont(new Font("Verdana",3,17));
-            Fisk_Kips.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Fisk og Kips"); }});
-            f.add(Fisk_Kips);
+        JButton FiskKips = new JButton("Fisk og Kips");
+            FiskKips.setBounds(50,630,200,50);
+            FiskKips.setFont(new Font("Verdana",3,17));
+            FiskKips.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Fisk og Kips");
+                Main.dataList.addElement("Fisk og Kips");
+            }});
+            add(FiskKips);
 
         //Nuggets
         JButton Nuggets = new JButton("Nuggets");
             Nuggets.setBounds(50,690,200,50);
             Nuggets.setFont(new Font("Verdana",3,17));
             Nuggets.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Nuggets"); }});
-            f.add(Nuggets);
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Nuggets");
+                Main.dataList.addElement("Nuggets");
+            }});
+            add(Nuggets);
 
         //Kips
         JButton Kips = new JButton("Kips");
             Kips.setBounds(50,750,200,50);
             Kips.setFont(new Font("Verdana",3,17));
             Kips.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Kips"); }});
-            f.add(Kips);
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Kips");
+                Main.dataList.addElement("Kips");
+            }});
+            add(Kips);
 
         //Broytt
         JButton Broytt = new JButton("broytt");
@@ -123,7 +154,7 @@ public class Grill extends Matur{
                 broytt_grill bp = new broytt_grill();
                 bp.broytt_Grill();
             }});
-        f.add(Broytt);
+        add(Broytt);
 
         //Pitsa
         JButton pitsa = new JButton("Pitsa");
@@ -132,18 +163,24 @@ public class Grill extends Matur{
             pitsa.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Pitsa");
-                Pitsa p = new Pitsa();
-                p.pitsa();
+                getMain().NavigateTo("Pitsa");
             }});
-            f.add(pitsa);
+            add(pitsa);
 
         //Strika
         JButton Strika = new JButton("Strika");
             Strika.setBounds(600,700,200,70);
             Strika.setFont(new Font("Verdana",3,17));
             Strika.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Strika"); }});
-            f.add(Strika);
+            public void actionPerformed(ActionEvent e){
+                int selected = list.getSelectedIndex();
+                if (selected != -1 ){
+                    Main.dataList.remove(selected);
+                    System.out.println(selected);
+                    System.out.println(selected);
+                }
+            }});
+            add(Strika);
 
         //Ligut
         JButton Ligut = new JButton("Ligut");
@@ -152,17 +189,11 @@ public class Grill extends Matur{
             Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
-                Main m = new Main();
-                m.Startsíða();
+                getMain().NavigateTo("Startsíða");
+                Main.dataList.removeAllElements();
+                Main.bestidling.clear();
             }});
-            f.add(Ligut);
-
-
-    //upsetanin
-        f.add(list);
-        f.setSize(900,1000);
-        f.setLayout(null);
-        f.setVisible(true);
+            add(Ligut);
 
     }
 }

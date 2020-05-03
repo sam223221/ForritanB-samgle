@@ -36,17 +36,17 @@ public class Main {
 
 
 
-        ArrayList<Bilur> NummarPláta = new ArrayList();
-        NummarPláta.add(b0);
-        NummarPláta.add(b1);
-        NummarPláta.add(b2);
+        ArrayList<Bilur> bil = new ArrayList();
+        bil.add(b0);
+        bil.add(b1);
+        bil.add(b2);
 
 
 
         String Input = JOptionPane.showInputDialog("Hvat er nummarplátan hjá tær");
 
-        for(int i = 0; i < NummarPláta.size(); i++){
-            Bilur t = NummarPláta.get(i);
+        for(int i = 0; i < bil.size(); i++){
+            Bilur t = bil.get(i);
 
             if (t.Nummarpláta.equals(Input)){
 

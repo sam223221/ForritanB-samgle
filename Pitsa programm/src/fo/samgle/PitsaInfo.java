@@ -1,16 +1,14 @@
 package fo.samgle;
 
-public class Matur {
+import java.util.ArrayList;
+
+public class PitsaInfo {
 
 
     String pitsaNavn = "";
     String doygg = "";
     String pitsasós = "";
-    String[] toppings ;
-
-    String BurgarNavn   = "";
-    String Dressing     = "";
-    String Millum       = "";
+    String[] toppings;
 
     @Override
     public String toString() {
