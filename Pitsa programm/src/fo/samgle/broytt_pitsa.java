@@ -25,12 +25,13 @@ public class broytt_pitsa {
         list.setBorder(border);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         f.add(list);
-            int tel = ;
+
+        int tel ;
         for ( int i = 0 ; i < tel; i++) {
-
-           BroyttDataList.addElement(Main.bestidling.get().toppings[i]);
-
+          // BroyttDataList.addElement(Main.bestidling.get().toppings[i]);
         }
+
+
         //Ostur
         JButton Ostur = new JButton("Ostur");
         Ostur.setBounds(25,20,175,50);
@@ -202,21 +203,27 @@ public class broytt_pitsa {
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Ligut");
-
+                for(int i = 0 ; i < BroyttDataList.size() ; i++){
+                    Main.bestidling.get(Pitsa.selected).toppings.toString().replace(i,BroyttDataList.get(i));
+                }
             }});
         f.add(Ligut);
 
 
         //av
-        JButton av = new JButton("av");
-        av.setBounds(685,300,175,50);
-        av.setFont(new Font("Verdana",3,17));
-        av.addActionListener(new ActionListener(){
+        JButton Strika = new JButton("av");
+        Strika.setBounds(685,300,175,50);
+        Strika.setFont(new Font("Verdana",3,17));
+        Strika.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("av");
-
+                System.out.println("Strika");
+                int selected = list.getSelectedIndex();
+                if (selected != -1 ){
+                    BroyttDataList.remove(selected);
+                    System.out.println(selected);
+                }
             }});
-        f.add(av);
+        f.add(Strika);
 
 
         //á
