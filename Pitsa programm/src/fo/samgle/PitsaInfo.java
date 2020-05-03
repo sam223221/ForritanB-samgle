@@ -1,12 +1,7 @@
 package fo.samgle;
 
-import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
-import java.util.ArrayList;
-
 public class Matur {
-    DefaultListModel dataList = new DefaultListModel();
+
 
     String pitsaNavn = "";
     String doygg = "";
@@ -20,7 +15,7 @@ public class Matur {
     @Override
     public String toString() {
 
-        return "\n\r" +
+        return  "\n\r" +
                 "   Pitsa Navn : " + pitsaNavn+ "\n\r" +
                 "   Doygg      : " + doygg    + "\n\r" +
                 "   pitsaos    : " + pitsasós + "\n\r" +
