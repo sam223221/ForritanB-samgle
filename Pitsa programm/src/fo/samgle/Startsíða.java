@@ -1,11 +1,15 @@
 package fo.samgle;
 
+import fo.samgle.Vísa.Visa;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Startsíða extends ViewBase{
+
+    int j = 1;
 
     public  Startsíða(){
         //yvirskrift
@@ -16,19 +20,23 @@ public class Startsíða extends ViewBase{
         Gera.setBounds(350,450,200,100);
         Gera.setFont(new Font("Verdana",3,25));
         Gera.addActionListener(e -> {
+            Main.ListdataList.addElement("Ordri " + j);
+            j++;
             getMain().NavigateTo("Pitsa");
+            Main.bestidling.clear();
         });
         add(Gera);
 
         //Vísa
-        JButton Vísa = new JButton("Vísa");
-        Vísa.setBounds(350,600,200,100);
-        Vísa.setFont(new Font("Verdana",3,25));
-        Vísa.addActionListener(e -> {
+        JButton v = new JButton("Vísa");
+        v.setBounds(350,600,200,100);
+        v.setFont(new Font("Verdana",3,25));
+        v.addActionListener(e -> {
+
             System.out.println("hellow");
             getMain().NavigateTo("Vísa");
         });
-        add(Vísa);
+        add(v);
 
         //Textfild
         tekst.setFont(new Font("Verdana",3,35));
