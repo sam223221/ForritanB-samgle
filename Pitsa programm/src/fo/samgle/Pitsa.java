@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 public class Pitsa extends ViewBase {
 
 public Integer select;
+
 public Pitsa(){
 
     //uppseting
@@ -381,8 +382,9 @@ public Pitsa(){
         public void actionPerformed(ActionEvent e){
             System.out.println("Ligut");
             getMain().NavigateTo("Startsíða");
-            System.out.println(Main.bestidling);
+            Main.goymaBestidling.add(Main.bestidling);
             Main.dataList.removeAllElements();
+            System.out.println(Main.goymaBestidling);
             Main.bestidling.clear();
         }});
         add(Ligut);

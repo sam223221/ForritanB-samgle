@@ -245,6 +245,7 @@ public class Grill extends ViewBase {
                 System.out.println("Ligut");
                 getMain().NavigateTo("Startsíða");
                 System.out.println(Main.bestidling);
+                Main.goymaBestidling.add(Main.bestidling);
                 Main.dataList.removeAllElements();
                 Main.bestidling.clear();
             }});

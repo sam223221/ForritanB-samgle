@@ -6,8 +6,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class broytt_pitsa {
-
+public class broytt_pitsa extends Main {
+    Pitsa p;
+    int tel = p.select;
+    int longdList = Main.bestidling.get(tel).toppings.length;
     public void Broytt_pitsa(){
 
         //uppseting
@@ -26,9 +28,8 @@ public class broytt_pitsa {
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         f.add(list);
 
-        int tel = 0;
-        for ( int i = 0 ; i < tel; i++) {
-          // BroyttDataList.addElement(Main.bestidling.get().toppings[i]);
+        for ( int i = 0 ; i < longdList; i++) {
+          BroyttDataList.addElement(Main.bestidling.get(tel).toppings[i]);
         }
 
 

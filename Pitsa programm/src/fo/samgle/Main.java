@@ -9,17 +9,22 @@ public class Main extends JFrame {
     private Grill grillPanel;
     private Startsíða startsíðaPanel;
     private Vísa vísaPanel;
+    private broytt_pitsa broyttPitsa;
+    private broytt_grill broyttGrill;
     public static DefaultListModel dataList     = new DefaultListModel();
     public static ArrayList<PitsaInfo> bestidling   = new ArrayList();
+    public static ArrayList<ArrayList<PitsaInfo>> goymaBestidling = new ArrayList();
+
 
     public static void main(String[] args) {
         Main m = new Main();
 
-        m.grillPanel                = new Grill();
-        m.pitsaPanel                = new Pitsa();
-        m.startsíðaPanel            = new Startsíða();
-        m.vísaPanel                 = new Vísa();
-
+        m.grillPanel        = new Grill();
+        m.pitsaPanel        = new Pitsa();
+        m.startsíðaPanel    = new Startsíða();
+        m.vísaPanel         = new Vísa();
+        m.broyttPitsa       = new broytt_pitsa();
+        m.broyttGrill       = new broytt_grill();
 
         m.NavigateTo("Startsíða");
         m.setSize(900, 1000);
