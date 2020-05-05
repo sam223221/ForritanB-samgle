@@ -11,7 +11,7 @@ public class PitsaInfo extends MatInfo {
     public String toString() {
 
         return
-                " Pitsa Navn : " + pitsaNavn   + "\n\r" +
+                "Pitsa Navn : " + pitsaNavn   + "\n\r" +
                 "   Doygg      : " + doygg       + "\n\r" +
                 "   pitsasós   : " + pitsasós    + "\n\r" +
                 "   toppings   : "  + Filla      + "\n\r" +

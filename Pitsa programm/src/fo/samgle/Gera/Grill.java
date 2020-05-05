@@ -249,7 +249,8 @@ public class Grill extends ViewBase {
             public void actionPerformed(ActionEvent e){
                 int selected = list.getSelectedIndex() + 1;
                 if (selected != -1 ){
-                    Main.dataList.remove(selected);
+                    Main.dataList.remove(selected-1);
+                    Main.bestidling.remove(selected);
                 }
             }});
             add(Strika);
@@ -262,6 +263,7 @@ public class Grill extends ViewBase {
             public void actionPerformed(ActionEvent e){
                 getMain().NavigateTo("Startsíða");
                 Main.bestidling.add(orderTjek);
+                Main.goymaBestidling.add(Main.bestidling);
                 Main.dataList.removeAllElements();
             }});
             add(Ligut);

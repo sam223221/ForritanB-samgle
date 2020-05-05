@@ -241,6 +241,7 @@ public class broytt_grill {
         Ligut.setFont(new Font("Verdana",3,17));
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                Main.bestidling.get(select).Filla.clear();
                 for(int i = 0 ; i < BroyttDataList.size() ; i++){
                     Main.bestidling.get(select).Filla.add((String) BroyttDataList.get(i));
                 }

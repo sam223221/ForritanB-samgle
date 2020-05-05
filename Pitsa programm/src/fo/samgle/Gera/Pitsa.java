@@ -428,7 +428,7 @@ public Pitsa(){
         public void actionPerformed(ActionEvent e){
             int selected = list.getSelectedIndex()+1;
         if (selected != -1 ){
-            Main.dataList.remove(selected);
+            Main.dataList.remove(selected-1);
             Main.bestidling.remove(selected);
         }
         }});
