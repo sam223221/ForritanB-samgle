@@ -1,7 +1,5 @@
 package fo.samgle.Gera;
 
-import fo.samgle.Gera.MatInfo;
-
 public class GrillInfo extends MatInfo {
 
     String GrillNavn = "";
@@ -10,9 +8,10 @@ public class GrillInfo extends MatInfo {
     @Override
     public String toString() {
 
-        return  "\n\r" +
-                "GrillNavn      : " + GrillNavn + "\n\r"+
-                "Eyka tilhoyri  : " + Filla      + "\n\r";
+        return
+                "   GrillNavn      : " + GrillNavn       + "\n\r"+
+                "   Eyka tilhoyri  : " + Filla           + "\n\r" +
+                "___________________________________________\n\r" + "\n\r";
     }
 
 }

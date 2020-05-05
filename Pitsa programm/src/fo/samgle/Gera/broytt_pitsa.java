@@ -45,7 +45,7 @@ public class broytt_pitsa extends Pitsa {
         Ostur.setBounds(25,20,175,50);
         Ostur.setFont(new Font("Verdana",3,17));
         Ostur.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Ost");
+            public void actionPerformed(ActionEvent e){
             BroyttDataList.addElement("Ost");
             }});
         f.add(Ostur);
@@ -57,7 +57,7 @@ public class broytt_pitsa extends Pitsa {
         Pepperoni.setBounds(25,90,175,50);
         Pepperoni.setFont(new Font("Verdana",3,17));
         Pepperoni.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Pepperoni");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Pepperoni");
 
             }});
@@ -69,7 +69,7 @@ public class broytt_pitsa extends Pitsa {
         Bacon.setBounds(25,160,175,50);
         Bacon.setFont(new Font("Verdana",3,17));
         Bacon.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Bacon");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Bacon");
 
             }});
@@ -81,7 +81,7 @@ public class broytt_pitsa extends Pitsa {
         Skinka.setBounds(25,230,175,50);
         Skinka.setFont(new Font("Verdana",3,17));
         Skinka.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Skinka");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Skinka");
 
             }});
@@ -93,7 +93,7 @@ public class broytt_pitsa extends Pitsa {
         Kjøt.setBounds(25,300,175,50);
         Kjøt.setFont(new Font("Verdana",3,17));
         Kjøt.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Kjøt");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Kjøt");
 
             }});
@@ -105,7 +105,7 @@ public class broytt_pitsa extends Pitsa {
         Tun.setBounds(25,370,175,50);
         Tun.setFont(new Font("Verdana",3,17));
         Tun.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Tun");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Tun");
 
             }});
@@ -116,7 +116,7 @@ public class broytt_pitsa extends Pitsa {
         Rækjur.setBounds(225,20,175,50);
         Rækjur.setFont(new Font("Verdana",3,17));
         Rækjur.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Rækjur");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Rækjur");
 
             }});
@@ -129,7 +129,7 @@ public class broytt_pitsa extends Pitsa {
         Leyk.setBounds(225,90,175,50);
         Leyk.setFont(new Font("Verdana",3,17));
         Leyk.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Leyk");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Leyk");
 
             }});
@@ -141,7 +141,7 @@ public class broytt_pitsa extends Pitsa {
         Annanas.setBounds(225,160,175,50);
         Annanas.setFont(new Font("Verdana",3,17));
         Annanas.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Annanas");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Annanas");
 
             }});
@@ -153,7 +153,7 @@ public class broytt_pitsa extends Pitsa {
         Piparfrukt.setBounds(225,230,175,50);
         Piparfrukt.setFont(new Font("Verdana",3,17));
         Piparfrukt.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Piparfrukt");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Piparfrukt");
 
             }});
@@ -165,7 +165,7 @@ public class broytt_pitsa extends Pitsa {
         Soppar.setBounds(225,300,175,50);
         Soppar.setFont(new Font("Verdana",3,17));
         Soppar.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Soppar");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Soppar");
 
             }});
@@ -177,7 +177,7 @@ public class broytt_pitsa extends Pitsa {
         Mais.setBounds(225,370,175,50);
         Mais.setFont(new Font("Verdana",3,17));
         Mais.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Mais");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Mais");
 
             }});
@@ -188,7 +188,7 @@ public class broytt_pitsa extends Pitsa {
         Hvítleyk.setBounds(450,20,175,50);
         Hvítleyk.setFont(new Font("Verdana",3,17));
         Hvítleyk.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Hvítleyk");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Hvítleyk");
 
             }});
@@ -201,7 +201,7 @@ public class broytt_pitsa extends Pitsa {
         Tabasco.setBounds(450,90,175,50);
         Tabasco.setFont(new Font("Verdana",3,17));
         Tabasco.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Tabasco");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Tabasco");
 
             }});
@@ -213,7 +213,7 @@ public class broytt_pitsa extends Pitsa {
         Jalapeno.setBounds(450,160,175,50);
         Jalapeno.setFont(new Font("Verdana",3,17));
         Jalapeno.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("Jalapeno");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("Jalapeno");
 
             }});
@@ -225,7 +225,7 @@ public class broytt_pitsa extends Pitsa {
         Islands.setBounds(450,230,175,50);
         Islands.setFont(new Font("Verdana",3,17));
         Islands.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("1000 Islands");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("1000 Islands");
 
             }});
@@ -237,7 +237,7 @@ public class broytt_pitsa extends Pitsa {
         Cream.setBounds(450,300,175,50);
         Cream.setFont(new Font("Verdana",3,17));
         Cream.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("creme fraiche");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("creme fraiche");
 
             }});
@@ -249,7 +249,7 @@ public class broytt_pitsa extends Pitsa {
         BBQ.setBounds(450,370,175,50);
         BBQ.setFont(new Font("Verdana",3,17));
         BBQ.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){ System.out.println("BBQ");
+            public void actionPerformed(ActionEvent e){
                 BroyttDataList.addElement("BBQ");
 
             }});
@@ -257,12 +257,11 @@ public class broytt_pitsa extends Pitsa {
 
 
         //Ligut
-        JButton Ligut = new JButton("Ligut");
+        JButton Ligut = new JButton("Liðgut");
         Ligut.setBounds(685,370,175,50);
         Ligut.setFont(new Font("Verdana",3,17));
         Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Ligut");
                 Main.bestidling.get(select).Filla.clear();
                 for(int i = 0 ; i < BroyttDataList.size() ; i++){
                     Main.bestidling.get(select).Filla.add((String) BroyttDataList.get(i));
@@ -278,7 +277,6 @@ public class broytt_pitsa extends Pitsa {
         Strika.setFont(new Font("Verdana",3,17));
         Strika.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Strika");
                 int selected = list.getSelectedIndex();
                 if (selected != -1 ){
                     BroyttDataList.remove(selected);

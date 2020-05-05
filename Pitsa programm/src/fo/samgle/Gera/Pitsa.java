@@ -2,6 +2,7 @@ package fo.samgle.Gera;
 
 import fo.samgle.Main;
 import fo.samgle.ViewBase;
+import fo.samgle.Vísa.OrderTjekEnd;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -11,6 +12,7 @@ import java.awt.event.ActionListener;
 
 public class Pitsa extends ViewBase {
 
+    OrderTjekEnd orderTjek = new OrderTjekEnd();
 
 public Pitsa(){
 
@@ -31,7 +33,7 @@ public Pitsa(){
         Margarita.setBounds(50,150,200,50);
         Margarita.setFont(new Font("Verdana",3,17));
         Margarita.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Margarita");
+        public void actionPerformed(ActionEvent e){
         PitsaInfo margarita = new PitsaInfo();
         margarita.pitsaNavn = "Margarita";
         margarita.doygg = "Medium";
@@ -48,7 +50,7 @@ public Pitsa(){
         Billy_the_kid.setBounds(50,210,200,50);
         Billy_the_kid.setFont(new Font("Verdana",3,17));
         Billy_the_kid.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Billy the kid");
+        public void actionPerformed(ActionEvent e){
         PitsaInfo Billy_the_Kid = new PitsaInfo();
             Billy_the_Kid.pitsaNavn = "Billy the Kid";
             Billy_the_Kid.doygg = "Medium";
@@ -66,7 +68,7 @@ public Pitsa(){
         Hawaii.setBounds(50,270,200,50);
         Hawaii.setFont(new Font("Verdana",3,17));
         Hawaii.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Hawaii");
+        public void actionPerformed(ActionEvent e){
         PitsaInfo Hawaii = new PitsaInfo();
             Hawaii.pitsaNavn = "Hawaii";
             Hawaii.doygg = "Medium";
@@ -84,7 +86,7 @@ public Pitsa(){
     Pepperoni.setBounds(50,330,200,50);
     Pepperoni.setFont(new Font("Verdana",3,17));
     Pepperoni.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Pepperoni");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Pepperoni = new PitsaInfo();
             Pepperoni.pitsaNavn = "Pepperoni";
             Pepperoni.doygg = "Medium";
@@ -101,7 +103,7 @@ public Pitsa(){
         Diablo_Tyson.setBounds(50,390,200,50);
         Diablo_Tyson.setFont(new Font("Verdana",3,17));
         Diablo_Tyson.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Diablo Tyson");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Diablo_Tyson = new PitsaInfo();
             Diablo_Tyson.pitsaNavn = "Diablo Tyson";
             Diablo_Tyson.doygg = "Medium";
@@ -121,7 +123,7 @@ public Pitsa(){
         Man_United.setBounds(50,450,200,50);
         Man_United.setFont(new Font("Verdana",3,17));
         Man_United.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Manchester United");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Man_United = new PitsaInfo();
             Man_United.pitsaNavn = "Manchester United";
             Man_United.doygg = "Medium";
@@ -140,7 +142,7 @@ public Pitsa(){
         Liverpool.setBounds(50,510,200,50);
         Liverpool.setFont(new Font("Verdana",3,17));
         Liverpool.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Liverpool");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Liverpool = new PitsaInfo();
             Liverpool.pitsaNavn = "Liverpool";
             Liverpool.doygg = "Medium";
@@ -159,7 +161,7 @@ public Pitsa(){
         Arsenal.setBounds(50,570,200,50);
         Arsenal.setFont(new Font("Verdana",3,17));
         Arsenal.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Arsenal");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Arsenal = new PitsaInfo();
             Arsenal.pitsaNavn = "Arsenal";
             Arsenal.doygg = "Medium";
@@ -178,7 +180,7 @@ public Pitsa(){
         Todi.setBounds(50,630,200,50);
         Todi.setFont(new Font("Verdana",3,17));
         Todi.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Todi");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Todi = new PitsaInfo();
             Todi.pitsaNavn = "Todi";
             Todi.doygg = "Medium";
@@ -200,7 +202,7 @@ public Pitsa(){
         Homer.setBounds(50,690,200,50);
         Homer.setFont(new Font("Verdana",3,17));
         Homer.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Homer");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Homer = new PitsaInfo();
             Homer.pitsaNavn = "Homer";
             Homer.doygg = "Medium";
@@ -219,7 +221,7 @@ public Pitsa(){
         Picasso.setBounds(50,750,200,50);
         Picasso.setFont(new Font("Verdana",3,17));
         Picasso.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Picasso");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Picasso = new PitsaInfo();
             Picasso.pitsaNavn = "Picasso";
             Picasso.doygg = "Medium";
@@ -239,7 +241,7 @@ public Pitsa(){
         Miss_piggy.setBounds(50,810,200,50);
         Miss_piggy.setFont(new Font("Verdana",3,17));
         Miss_piggy.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Miss Piggy");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Miss_piggy = new PitsaInfo();
             Miss_piggy.pitsaNavn = "Miss piggy";
             Miss_piggy.doygg = "Medium";
@@ -258,7 +260,7 @@ public Pitsa(){
         Pitsa_530.setBounds(300,150,200,50);
         Pitsa_530.setFont(new Font("Verdana",3,17));
         Pitsa_530.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Pitsa 530");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Pitsa_530 = new PitsaInfo();
             Pitsa_530.pitsaNavn = "Pitsa 530";
             Pitsa_530.doygg = "Medium";
@@ -278,7 +280,7 @@ public Pitsa(){
         Salat_pitsa.setBounds(300,210,200,50);
         Salat_pitsa.setFont(new Font("Verdana",3,17));
         Salat_pitsa.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Salat Pitsa");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Salat_pitsa = new PitsaInfo();
             Salat_pitsa.pitsaNavn = "Salat pitsa";
             Salat_pitsa.doygg = "Medium";
@@ -294,7 +296,7 @@ public Pitsa(){
         Peproni_special.setBounds(300,270,200,50);
         Peproni_special.setFont(new Font("Verdana",3,17));
         Peproni_special.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Pep Special");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Peproni_special = new PitsaInfo();
             Peproni_special.pitsaNavn = "Peproni special";
             Peproni_special.doygg = "Medium";
@@ -313,7 +315,7 @@ public Pitsa(){
         Kirjastein.setBounds(300,330,200,50);
         Kirjastein.setFont(new Font("Verdana",3,17));
         Kirjastein.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Kirjastein");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Kirjastein = new PitsaInfo();
             Kirjastein.pitsaNavn = "Kirjastein";
             Kirjastein.doygg = "Medium";
@@ -333,7 +335,7 @@ public Pitsa(){
         Bakerstreet.setBounds(300,390,200,50);
         Bakerstreet.setFont(new Font("Verdana",3,17));
         Bakerstreet.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Bakerstreet");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Bakerstreet = new PitsaInfo();
             Bakerstreet.pitsaNavn = "Bakerstreet";
             Bakerstreet.doygg = "Medium";
@@ -361,7 +363,7 @@ public Pitsa(){
         Tin_pitsa.setBounds(300,450,200,50);
         Tin_pitsa.setFont(new Font("Verdana",3,17));
         Tin_pitsa.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Tin Pitsa");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Tin_pitsa = new PitsaInfo();
             Tin_pitsa.pitsaNavn = "Tin_pitsa";
             Tin_pitsa.doygg = "Medium";
@@ -377,7 +379,7 @@ public Pitsa(){
         Vegitar_pitsa.setBounds(300,510,200,50);
         Vegitar_pitsa.setFont(new Font("Verdana",3,17));
         Vegitar_pitsa.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Vegitar Pitsa");
+        public void actionPerformed(ActionEvent e){
             PitsaInfo Vegitar_pitsa = new PitsaInfo();
             Vegitar_pitsa.pitsaNavn = "Vegitar_pitsa";
             Vegitar_pitsa.doygg = "Medium";
@@ -393,30 +395,26 @@ public Pitsa(){
         add(Vegitar_pitsa);
 
     //Broytt
-    JButton Broytt = new JButton("broytt");
-        Broytt.setBounds(600,500,200,70);
+    JButton Broytt = new JButton("Broytt");
+        Broytt.setBounds(600,470,200,70);
         Broytt.setFont(new Font("Verdana",3,17));
         Broytt.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
-            int selected = list.getSelectedIndex();
-            System.out.println("Broytt");
-            System.out.println(selected);
+            int selected = list.getSelectedIndex() + 1 ;
             if(selected != -1 ) {
                 broytt_pitsa broyttPitsa = new broytt_pitsa();
                 broyttPitsa.select = selected;
                 broyttPitsa.Broytt_pitsa();
-                System.out.println(broyttPitsa.select);
             }
         }});
         add(Broytt);
 
     //Grill
     JButton Grill = new JButton("Grill");
-        Grill.setBounds(600,600,200,70);
+        Grill.setBounds(600,570,200,70);
         Grill.setFont(new Font("Verdana",3,17));
         Grill.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
-            System.out.println("Grill");
             getMain().NavigateTo("Grill");
 
         }});
@@ -424,30 +422,29 @@ public Pitsa(){
 
     //Strika
     JButton Strika = new JButton("Strika");
-        Strika.setBounds(600,700,200,70);
+        Strika.setBounds(600,670,200,70);
         Strika.setFont(new Font("Verdana",3,17));
         Strika.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e){ System.out.println("Strika");
-            int selected = list.getSelectedIndex();
+        public void actionPerformed(ActionEvent e){
+            int selected = list.getSelectedIndex()+1;
         if (selected != -1 ){
             Main.dataList.remove(selected);
             Main.bestidling.remove(selected);
-            System.out.println(selected);
         }
         }});
         add(Strika);
 
     //Ligut
-    JButton Ligut = new JButton("Ligut");
-        Ligut.setBounds(600,800,200,70);
+    JButton Ligut = new JButton("Liðgut");
+        Ligut.setBounds(600,770,200,70);
         Ligut.setFont(new Font("Verdana",3,17));
         Ligut.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e){
-            System.out.println("Ligut");
             getMain().NavigateTo("Startsíða");
+            Main.bestidling.add(orderTjek);
             Main.goymaBestidling.add(Main.bestidling);
             Main.dataList.removeAllElements();
-            System.out.println(Main.goymaBestidling);
+
         }});
         add(Ligut);
 }

@@ -8,10 +8,11 @@ public class BurgaraInfo extends MatInfo {
     @Override
     public String toString() {
 
-        return  "\n\r" +
+        return
                 "   Burgara Navn    : " + BurgaraNavn + "\n\r" +
                 "   Búffar          : " + Búffar      + "\n\r" +
-                "   fillan          : " + Filla       + "\n\r" ;
+                "   fillan          : " + Filla       + "\n\r" +
+                "___________________________________________\n\r" + "\n\r" ;
     }
 
 }

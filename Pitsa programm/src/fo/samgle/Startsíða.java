@@ -1,6 +1,6 @@
 package fo.samgle;
 
-import fo.samgle.Vísa.Visa;
+import fo.samgle.Vísa.OrderTjekStart;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 public class Startsíða extends ViewBase{
 
     int j = 1;
+    OrderTjekStart orderTjek = new OrderTjekStart();
 
     public  Startsíða(){
         //yvirskrift
@@ -24,6 +25,7 @@ public class Startsíða extends ViewBase{
             j++;
             getMain().NavigateTo("Pitsa");
             Main.bestidling.clear();
+            Main.bestidling.add(orderTjek);
         });
         add(Gera);
 
@@ -32,8 +34,6 @@ public class Startsíða extends ViewBase{
         v.setBounds(350,600,200,100);
         v.setFont(new Font("Verdana",3,25));
         v.addActionListener(e -> {
-
-            System.out.println("hellow");
             getMain().NavigateTo("Vísa");
         });
         add(v);
@@ -46,5 +46,4 @@ public class Startsíða extends ViewBase{
         //uppseting
         setLayout(null);
     }
-
 }

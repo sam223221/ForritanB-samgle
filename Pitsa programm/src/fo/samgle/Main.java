@@ -38,8 +38,8 @@ public class Main extends JFrame {
         m.pitsaVisa         = new PitsaVisa();
         m.grillVisa         = new GrillVisa();
 
-        //m.grillVisa.GrillVisa();
-        //m.pitsaVisa.PitsaVísa();
+        m.grillVisa.GrillVisa();
+        m.pitsaVisa.PitsaVísa();
 
         m.NavigateTo("Startsíða");
         m.setSize(900, 1000);

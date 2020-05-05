@@ -2,6 +2,7 @@ package fo.samgle.Gera;
 
 import fo.samgle.Main;
 import fo.samgle.ViewBase;
+import fo.samgle.Vísa.OrderTjekEnd;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -10,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Grill extends ViewBase {
+
+    OrderTjekEnd orderTjek = new OrderTjekEnd();
 
     public Grill(){
 
@@ -33,7 +36,6 @@ public class Grill extends ViewBase {
             JumboBurgari.setFont(new Font("Verdana",3,17));
             JumboBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Jumbo Burgari");
                 BurgaraInfo JumboBurgari = new BurgaraInfo();
                 JumboBurgari.BurgaraNavn = "JumboBurgari";
                 JumboBurgari.Búffar = 2;
@@ -53,7 +55,6 @@ public class Grill extends ViewBase {
             BigBurgari.setFont(new Font("Verdana",3,17));
             BigBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Big Burgari");
                 BurgaraInfo BigBurgari = new BurgaraInfo();
                 BigBurgari.BurgaraNavn = "BigBurgari";
                 BigBurgari.Búffar = 1;
@@ -73,7 +74,6 @@ public class Grill extends ViewBase {
             CheeseBurgari.setFont(new Font("Verdana",3,17));
             CheeseBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Cheese Burgari");
                 BurgaraInfo CheeseBurgari = new BurgaraInfo();
                 CheeseBurgari.BurgaraNavn = "CheeseBurgari";
                 CheeseBurgari.Búffar = 1;
@@ -94,7 +94,6 @@ public class Grill extends ViewBase {
             BaconBurgari.setFont(new Font("Verdana",3,17));
             BaconBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Bacon Burgari");
                 BurgaraInfo BaconBurgari = new BurgaraInfo();
                 BaconBurgari.BurgaraNavn = "BaconBurgari";
                 BaconBurgari.Búffar = 1;
@@ -114,7 +113,6 @@ public class Grill extends ViewBase {
         JuniorBurgari.setFont(new Font("Verdana",3,17));
         JuniorBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Junior Burgari");
                 BurgaraInfo JuniorBurgari = new BurgaraInfo();
                 JuniorBurgari.BurgaraNavn = "JuniorBurgari";
                 JuniorBurgari.Búffar = 1;
@@ -131,9 +129,8 @@ public class Grill extends ViewBase {
             Búffsandwich.setFont(new Font("Verdana",3,17));
             Búffsandwich.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Búffsandwich");
                 BurgaraInfo Búffsandwich = new BurgaraInfo();
-                Búffsandwich.BurgaraNavn = "JumboBurgari";
+                Búffsandwich.BurgaraNavn = "Búffsandwich";
                 Búffsandwich.Búffar = 2;
                 Búffsandwich.Filla.add("súlta Agurk");
                 Búffsandwich.Filla.add("Reyttkál");
@@ -151,7 +148,6 @@ public class Grill extends ViewBase {
             KyllingaBurgari.setFont(new Font("Verdana",3,17));
             KyllingaBurgari.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Kyllinga burgari");
                 BurgaraInfo KyllingaBurgari = new BurgaraInfo();
                 KyllingaBurgari.BurgaraNavn = "KyllingaBurgari";
                 KyllingaBurgari.Búffar = 1;
@@ -170,11 +166,10 @@ public class Grill extends ViewBase {
             KyllingKips.setFont(new Font("Verdana",3,17));
             KyllingKips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Kylling og kips");
                 GrillInfo KyllingKips = new GrillInfo();
                 KyllingKips.GrillNavn = "Kylling og kips";
-                KyllingKips.Filla.add("Onki");
-                Main.dataList.addElement("");
+                KyllingKips.Filla.add("");
+                Main.dataList.addElement("Kylling og kips");
                 Main.bestidling.add(KyllingKips);
             }});
             add(KyllingKips);
@@ -185,7 +180,6 @@ public class Grill extends ViewBase {
             FiskKips.setFont(new Font("Verdana",3,17));
             FiskKips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Fisk og Kips");
                 GrillInfo FiskKips = new GrillInfo();
                 FiskKips.GrillNavn = "Fisk og Kips";
                 FiskKips.Filla.add("");
@@ -200,7 +194,6 @@ public class Grill extends ViewBase {
             Nuggets.setFont(new Font("Verdana",3,17));
             Nuggets.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Nuggets");
                 GrillInfo Nuggets = new GrillInfo();
                 Nuggets.GrillNavn = "Nuggets";
                 Nuggets.Filla.add("");
@@ -215,7 +208,6 @@ public class Grill extends ViewBase {
             Kips.setFont(new Font("Verdana",3,17));
             Kips.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Kips");
                 GrillInfo Kips = new GrillInfo();
                 Kips.GrillNavn = "Kips";
                 Kips.Filla.add("");
@@ -225,62 +217,53 @@ public class Grill extends ViewBase {
             add(Kips);
 
         //Broytt
-        JButton Broytt = new JButton("broytt");
-        Broytt.setBounds(600,500,200,70);
+        JButton Broytt = new JButton("Broyt");
+        Broytt.setBounds(600,470,200,70);
         Broytt.setFont(new Font("Verdana",3,17));
         Broytt.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                int selected = list.getSelectedIndex();
+                int selected = list.getSelectedIndex()+1;
                 if(selected != -1 ) {
                     broytt_grill broyttPitsa = new broytt_grill();
                     broyttPitsa.select = selected;
                     broyttPitsa.broytt_Grill();
-                    System.out.println(broyttPitsa.select);
                 }
             }});
         add(Broytt);
 
         //Pitsa
         JButton pitsa = new JButton("Pitsa");
-            pitsa.setBounds(600,600,200,70);
+            pitsa.setBounds(600,570,200,70);
             pitsa.setFont(new Font("Verdana",3,17));
             pitsa.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Pitsa");
-                BurgaraInfo burgaraInfo = new BurgaraInfo();
                 getMain().NavigateTo("Pitsa");
             }});
             add(pitsa);
 
         //Strika
         JButton Strika = new JButton("Strika");
-            Strika.setBounds(600,700,200,70);
+            Strika.setBounds(600,670,200,70);
             Strika.setFont(new Font("Verdana",3,17));
             Strika.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                int selected = list.getSelectedIndex();
+                int selected = list.getSelectedIndex() + 1;
                 if (selected != -1 ){
                     Main.dataList.remove(selected);
-                    System.out.println(selected);
-                    System.out.println(selected);
                 }
             }});
             add(Strika);
 
-        //Ligut
-        JButton Ligut = new JButton("Ligut");
-            Ligut.setBounds(600,800,200,70);
+        //Liðgut
+        JButton Ligut = new JButton("Liðgut");
+            Ligut.setBounds(600,770,200,70);
             Ligut.setFont(new Font("Verdana",3,17));
             Ligut.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.out.println("Ligut");
                 getMain().NavigateTo("Startsíða");
-                System.out.println(Main.bestidling);
-                Main.goymaBestidling.add(Main.bestidling);
+                Main.bestidling.add(orderTjek);
                 Main.dataList.removeAllElements();
-                Main.bestidling.clear();
             }});
             add(Ligut);
-
     }
 }
