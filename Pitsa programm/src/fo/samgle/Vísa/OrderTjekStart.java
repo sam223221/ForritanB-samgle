@@ -7,6 +7,6 @@ public class OrderTjekStart extends MatInfo {
 
     @Override
     public String toString() {
-        return  "Byrjan_____________________\n\r" + "\n\r";
+        return  "Byrjan  \n\r" + "\n\r";
     }
 }
