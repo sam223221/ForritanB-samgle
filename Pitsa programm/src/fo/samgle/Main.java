@@ -4,7 +4,7 @@ import fo.samgle.Gera.*;
 import fo.samgle.Vísa.GrillVisa;
 import fo.samgle.Vísa.PitsaVisa;
 import fo.samgle.Vísa.Visa;
-import jdk.internal.dynalink.beans.StaticClass;
+//import jdk.internal.dynalink.beans.StaticClass;
 
 import javax.swing.*;
 import java.util.ArrayList;
