@@ -6,6 +6,6 @@ public class OrderTjekEnd extends MatInfo {
 
     @Override
     public String toString() {
-        return  "Endin_____________________";
+        return  "Endin\n" + "\n";
     }
 }
