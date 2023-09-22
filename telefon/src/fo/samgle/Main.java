@@ -1,7 +1,6 @@
 package fo.samgle;
 
 import javax.swing.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
@@ -39,7 +38,11 @@ public class Main {
 
             if (t.EigaraNavn.equals(Input)){
 
-                System.out.println("Eiðari: " + t.EigaraNavn + "    framleiðari: " + t.Freamleiðari + "     Model: " + t.Model + "      skermstødd: " + t.SkermStødd);
+                System.out.println(
+                    "       Eiðari:"        + t.EigaraNavn + 
+                    "       framleiðari:"   + t.Freamleiðari + 
+                    "       Model:"         + t.Model + 
+                    "       skermstødd:"    + t.SkermStødd);
                 return;
             }
 

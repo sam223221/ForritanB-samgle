@@ -1,13 +1,15 @@
 package fo.samgle;
 
+import java.util.ArrayList;
+
 public class Bilur {
 
-    public String Framleiðari    =   "";
-    public String Model          =   "";
-    public String Motorstødd     =   "";
-    public String EigaraNavn     =   "";
-    public String Nummarpláta    =   "";
-    public Integer Ferð          =   0;
+    public String   Framleiðari     =   "";
+    public String   Model           =   "";
+    public String   Motorstødd      =   "";
+    public String   EigaraNavn      =   "";
+    public String   Nummarpláta     =   "";
+    public Integer  Ferð            =   0 ;
 
     @Override
     public String toString(){
@@ -20,6 +22,8 @@ public class Bilur {
                 "   EigaraNavn    "        + EigaraNavn  + "\n\r"
                 ;
     }
+
+
 
         public void Koyr() {
             this.Ferð = 50;

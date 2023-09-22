@@ -19,7 +19,7 @@ public class Main {
 
 
         panel.setBackground(Color.BLACK);
-        frame.setSize(panel.F_W,panel.F_H);
+        frame.setSize(400,400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel.button1,BorderLayout.NORTH);
         frame.add(panel.button2,BorderLayout.SOUTH);
@@ -28,7 +28,7 @@ public class Main {
             public void actionPerformed(ActionEvent e){
                 panel.ingame = false;
                 System.out.println("hettar riggar");
-                new Board();
+                panel.repaint();
             }});
 
 
@@ -36,25 +36,12 @@ public class Main {
             public void actionPerformed(ActionEvent e){
                 panel.ingame = true;
                 System.out.println("haleluja");
-                new Board();
+                panel.repaint();
             }});
         frame.setVisible(true);
 
         frame.add(panel);
 
-
-
-/*
-        Board panel = new Board();
-        Frame frame = new Frame();
-
-
-
-
-
-
-        panel.add();
-*/
     }
 
 }
