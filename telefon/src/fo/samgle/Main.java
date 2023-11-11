@@ -8,7 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         telefon T1 = new telefon();
         T1.EigaraNavn = "Sjúrður";
         T1.Freamleiðari = "Kina";
@@ -34,12 +33,13 @@ public class Main {
 
         String Input = JOptionPane.showInputDialog("hvat er navn títt");
 
-        for(int i = 0; i < Telefonhaldari.size(); i++){
+        for (int i = 0; i < Telefonhaldari.size(); i++) {
             telefon t = Telefonhaldari.get(i);
 
-            if (t.EigaraNavn.equals(Input)){
+            if (t.EigaraNavn.equals(Input)) {
 
-                System.out.println("Eiðari: " + t.EigaraNavn + "    framleiðari: " + t.Freamleiðari + "     Model: " + t.Model + "      skermstødd: " + t.SkermStødd);
+                System.out.println("Eiðari: " + t.EigaraNavn + "    framleiðari: " + t.Freamleiðari + "     Model: "
+                        + t.Model + "      skermstødd: " + t.SkermStødd);
                 return;
             }
 
